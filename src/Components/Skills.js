@@ -17,13 +17,14 @@ export const Skills = () => {
             <button className="button">REACT</button>
           </div>
           <div className="item">
-            <i className="fa-brands fa-java"></i>
-            <button className="button">JAVA</button>
+            <i className="fa-brands fa-square-js"></i>
+            <button className="button">JAVASCRIPT</button>
           </div>
           <div className="item">
-            <i className="fa-solid fa-database"></i>
-            <button className="button">MONGO DB</button>
+            <i class="fa-brands fa-bootstrap"></i>{" "}
+            <button className="button">BOOSTRAP</button>
           </div>
+
           <div className="item">
             <i className="fa-brands fa-github"></i>
             <button className="button">GITHUB</button>

@@ -1,16 +1,77 @@
+// import { faSliders } from "@fortawesome/free-solid-svg-icons";
 import image1 from "../assests/1.png";
 import image2 from "../assests/2.png";
 import image3 from "../assests/3.png";
-import image4 from "../assests/4.png";
 import image5 from "../assests/5.png";
+import image6 from "../assests/6.png";
+import image7 from "../assests/7.png";
+import Carousel from "react-bootstrap/Carousel";
+// import React from "react";
 
 export const Projects = () => {
+  const projects = [
+    {
+      source: image1,
+      alt: "Slider1",
+      heading: "this is my heaing",
+      description: "description",
+      link: "",
+    },
+    {
+      source: image2,
+      alt: "Slider2",
+      heading: "this is my heaing",
+      description: "description",
+    },
+    {
+      source: image3,
+      alt: "slider3",
+      heading: "this is my heaing",
+      description: "description",
+    },
+
+    {
+      source: image5,
+      alt: "slider3",
+      heading: "this is my heaing",
+      description: "description",
+    },
+    {
+      source: image6,
+      alt: "slider3",
+      heading: "this is my heaing",
+      description: "description",
+    },
+    {
+      source: image7,
+      alt: "slider3",
+      heading: "this is my heaing",
+      description: "description",
+    },
+  ];
   return (
     <>
-      {" "}
       <div className="projects flex" id="projects">
         <h1>My Projects</h1>
 
+        <Carousel>
+          {projects.map((image, index) => (
+            <Carousel.Item>
+              <img
+                key={index}
+                className="d-block w-80"
+                src={image.source}
+                alt={image.alt}
+              />
+              <Carousel.Caption key={index}>
+                <h3>{image.heading}</h3>
+                <p>{image.description}</p>
+                <i className="fa-brands fa-github"></i>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+        {/* 
         <div className="flex">
           <div className="box">
             <div className="card">
@@ -137,7 +198,7 @@ export const Projects = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
