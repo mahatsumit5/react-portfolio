@@ -769,7 +769,7 @@ ol {
 /* Media Query for Mobile PHones */
 /* Media Query for Mobile PHones */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .dark-mode-toggle {
     position: fixed;
     top: 6rem;
@@ -778,7 +778,7 @@ ol {
   }
   section div {
     /* background-color: rgba(83, 97, 109, 0.482); */
-    width: 90%;
+    width: 50%;
     position: absolute;
     top: 0vh;
 

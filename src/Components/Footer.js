@@ -6,17 +6,17 @@ export const Footer = () => {
           <div className="link1">
             <h3>Social Links</h3>
             <ol className="links">
-              <a>
+              <a href="www.facebook.com">
                 {" "}
                 <li>Facebook</li>
               </a>
-              <a>
+              <a href="www.linkedin.com">
                 <li>LinkedIn</li>
               </a>
-              <a>
+              <a href="www.instagram.com">
                 <li>Instagram</li>
               </a>
-              <a>
+              <a href="www.telegram.com">
                 <li>Telegram</li>
               </a>
             </ol>

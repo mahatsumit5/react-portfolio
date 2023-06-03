@@ -9,8 +9,8 @@ import { Source } from "./Components/SourceCode";
 import { Footer } from "./Components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
-import { Link } from "react-router-dom";
+// import { Route, Routes } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function App() {
   return (
