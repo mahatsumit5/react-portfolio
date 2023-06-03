@@ -1,7 +1,10 @@
-export const MenuItem = () => {
+import { Link } from "react-router-dom";
+export const MenuItem = ({ href, label }) => {
   return (
     <li>
-      <a href="#hero">Home</a>
+      <Link className="nav-link" aria-current="page" to={href}>
+        {label}
+      </Link>{" "}
     </li>
   );
 };

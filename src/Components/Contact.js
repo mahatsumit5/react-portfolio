@@ -5,19 +5,16 @@ export const Contact = () => {
       <div className="contact flex" id="contact">
         <h1>Contact me</h1>
         <div className="item1 flex">
-          <div className="icons1">
-            <p>YOUTUBE</p>
-            <a href="https://www.youtube.com" target="_blank">
-              <i className="fa-brands fa-youtube"></i>
-            </a>
-          </div>
           <div className="icons2">
-            <a href="https://www.linkedin.com" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/mahat-sumit-9421381a3/"
+              target="_blank"
+            >
               <i className="fa-brands fa-linkedin"></i>
             </a>
           </div>
           <div className="icons3">
-            <a href="https://www.instagram.com" target="_blank">
+            <a href="https://www.instagram.com/mahatsumit99" target="_blank">
               <i className="fa-brands fa-instagram"></i>
             </a>
           </div>

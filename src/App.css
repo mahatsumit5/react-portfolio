@@ -22,7 +22,7 @@ body {
 }
 h1 {
   color: var(--secondary-color);
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 p {
@@ -45,22 +45,22 @@ p {
 section {
   display: flex;
   width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
 }
 section div {
-  /* background-color: rgba(83, 97, 109, 0.482); */
-
   width: 50%;
   position: absolute;
-  top: 10vh;
-  left: 10vw;
-  border-radius: 10px;
+  top: 25vh;
+  left: 25vw;
+  /* border-radius: 10px; */
   padding: 10px;
   color: var(--dominant-color);
   backdrop-filter: blur(10px);
+  gap: 2rem;
 }
-section div div {
-  height: 80vh;
-}
+
 section div h1 {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-size: 7rem;
@@ -81,8 +81,8 @@ section div p {
 }
 Video {
   width: 100%;
-  min-height: 100%;
-  background-attachment: fixed;
+  height: 50%;
+  /* background-attachment: var(--color-dark); */
 }
 
 .button2 {
@@ -193,24 +193,18 @@ Video {
   cursor: pointer;
   transition: all 0.5s;
 }
-
+/* 
 .wrapper {
   display: flex;
   flex-direction: column;
   background: rgb(88, 81, 244);
   overflow-y: hidden;
 
-  /* background: linear-gradient(
-    to right,
-    rgb(88, 81, 244) 0%,
-    rgb(150, 138, 182) 65%,
-    rgb(104, 186, 165) 100%
-  ); */
   background-color: var(--dominant-color);
   min-height: 100vh;
   color: var(--text-color);
   align-items: center;
-}
+} */
 
 /* dark mode activation */
 
@@ -239,7 +233,7 @@ header {
   position: sticky;
   top: 0;
   color: var(--secondary-color);
-  z-index: 100;
+  z-index: 10;
   width: 100%;
   background: linear-gradient(
     to right,
@@ -257,14 +251,6 @@ header {
   /* overflow-x: hidden; */
 }
 
-.logo {
-  align-items: center;
-}
-.logo > h1 {
-  font-size: 2rem;
-  color: var(--dominant-color);
-}
-
 .menu-icon,
 .side-bar,
 #check {
@@ -276,29 +262,26 @@ header {
 }
 .menu > .navigation > li {
   font-family: Impact, Charcoal, sans-serif;
-  /* border-style: dashed; */
   letter-spacing: 6px;
-  word-spacing: -4.8px;
   padding: 20px 2px;
-  font-weight: 400;
 
   font-style: normal;
   font-variant: small-caps;
   text-transform: uppercase;
   margin: 0 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--dominant-color);
   /* background-color: var(--accent-color); */
 }
 
 .navigation li a {
-  transition: all 1000ms;
+  transition: all 1s;
 }
 .navigation li:hover {
-  /* color: var(--secondary-color); */
   cursor: pointer;
-  font-size: 1.9rem;
-  background-color: var(--secondary-color);
+  font-style: normal;
+  text-decoration: underline;
+  color: var(--color-dark);
 }
 
 /* <!-- hero section --> */
@@ -310,20 +293,14 @@ header {
 /* <!-- hero section --> */
 /* <!-- hero section --> */
 .hero {
-  /* position: relative;
-  top: 0vh; */
-  /* border-style: dotted; */
   flex-wrap: wrap;
   min-height: 90vh;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  /* color: rgb(19, 12, 12); */
-  width: 70%;
-
-  padding-top: 0rem;
+  width: 100%;
 }
 .hero > .flex {
-  width: 100%;
+  width: 80%;
   /* border-style: solid; */
   background-color: var(--dominant-color);
   justify-content: space-between;
@@ -331,6 +308,7 @@ header {
   /* box-shadow: -4px 12px 29px 0px rgba(47, 128, 237, 0.98); */
   color: var(--secondary-color);
   border-radius: 10px;
+  align-items: center;
 }
 .hero .flex .flex h1 {
   font-size: 4rem;
@@ -398,7 +376,7 @@ div .button {
   top: 5vh;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
 }
 
 .banner > div {
@@ -458,14 +436,13 @@ H3 {
   /* border-style: dashed; */
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  width: 70%;
-  padding-top: 8rem;
+  gap: 2rem;
+  width: 100%;
 }
 
 .skills > .flex {
   color: var(--secondary-color);
-  width: 100%;
+  width: 80%;
   border-radius: 20px;
   /* background-color: var(--color-blue); */
   justify-content: space-between;
@@ -514,78 +491,18 @@ H3 {
   align-items: center;
   flex-direction: column;
   gap: 5rem;
-  padding-top: 9rem;
-  width: 70%;
+  padding-top: 3rem;
+  width: 100%;
 }
 
 .projects > div {
-  width: 100%;
-  margin: auto;
+  width: 70%;
   /* border-style: solid; */
   min-height: 40vh;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  gap: 5rem;
   flex-wrap: wrap;
   flex-direction: row;
-}
-.projects > .flex > .box {
-  /* border-style: dotted; */
-  width: 350px;
-  height: 500px;
-  perspective: 1000px;
-  border-radius: 35px;
-  background: linear-gradient(145deg, #ffffff, #dad9df);
-  box-shadow: 29px 29px 57px #a9a9ae, -29px -29px 57px #ffffff;
-}
-.box:hover > .card {
-  cursor: pointer;
-  transform: rotateY(180deg);
-}
-
-.front,
-.back {
-  width: 350px;
-  height: 500px;
-  border-radius: 2rem;
-
-  position: absolute;
-  backface-visibility: hidden;
-}
-.front {
-  animation: rotate 2s linear 1;
-  transition: 2s;
-}
-.back {
-  transform: rotateY(180deg);
-  background-color: var(--secondary-color);
-  color: white;
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-  font-size: 2rem;
-  flex-wrap: wrap;
-}
-.back p {
-  font-size: 1.5rem;
-  color: white;
-}
-
-.card {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  transition: transform 1500ms;
-  transform-style: preserve-3d;
-}
-.projects > .flex > .card:hover > .front {
-  transform: rotateY(180deg);
-}
-img {
-  border-radius: 15px;
 }
 
 /* <!-- about me --> */
@@ -597,7 +514,7 @@ img {
 
 .about {
   /* border-style: dashed; */
-  width: 70%;
+  width: 100%;
   position: relative;
   top: 5vh;
   justify-content: flex-start;
@@ -609,7 +526,7 @@ img {
 
 .about > div {
   /* border-style: dashed; */
-  width: 100%;
+  width: 80%;
   min-height: 60vh;
   border-radius: 20px;
   /* background-color: var(--color-blue); */
@@ -659,14 +576,14 @@ img {
   flex-direction: column;
   align-items: center;
   padding: 0rem 0 1rem 0;
-  width: 70%;
+  width: 100%;
 }
 
 .contact > .item1 {
   color: #2f80ed;
   gap: 1rem;
   font-size: 4rem;
-  width: 100%;
+  width: 80%;
   /* border-style: dashed; */
   display: flex;
   justify-content: space-between;
@@ -789,7 +706,7 @@ footer {
   top: 10vh;
   justify-content: space-between;
   /* border-style: dashed; */
-  min-height: 15vh;
+  min-height: 10vh;
   /* background-color: #020000; */
   color: var(--dominant-color);
   align-items: center;
@@ -806,11 +723,11 @@ footer {
 footer > .div1 {
   /* border-style: dotted; */
   justify-content: center;
-  gap: 5rem;
+  gap: 1rem;
 }
 ol {
   list-style: none;
-  padding: 2rem;
+  padding: 1rem;
   gap: 1rem;
 }
 
@@ -889,7 +806,7 @@ ol {
     transition: 1s;
   }
   #check {
-    display: none;
+    display: block;
   }
   .navigation {
     display: none;
