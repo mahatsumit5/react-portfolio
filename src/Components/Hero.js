@@ -1,3 +1,5 @@
+import pic from "../assests/mypic.png";
+
 export const Hero = () => {
   return (
     <>
@@ -37,7 +39,7 @@ export const Hero = () => {
             </div>
           </div>
           <div>
-            <img src="." />
+            <img src={pic} />
           </div>
         </div>
       </div>

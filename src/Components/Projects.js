@@ -1,3 +1,9 @@
+import image1 from "../assests/1.png";
+import image2 from "../assests/2.png";
+import image3 from "../assests/3.png";
+import image4 from "../assests/4.png";
+import image5 from "../assests/5.png";
+
 export const Projects = () => {
   return (
     <>
@@ -9,7 +15,7 @@ export const Projects = () => {
           <div className="box">
             <div className="card">
               <div className="front">
-                <img src="./1.png" />
+                <img src={image1} />
               </div>
               <div className="back">
                 <icon>
@@ -24,7 +30,7 @@ export const Projects = () => {
           <div className="box">
             <div className="card">
               <div className="front">
-                <img src="./2.png" />
+                <img src={image2} />
               </div>
               <div className="back">
                 <icon>
@@ -41,7 +47,7 @@ export const Projects = () => {
           <div className="box">
             <div className="card">
               <div className="front">
-                <img src="./3.png" />
+                <img src={image3} />
               </div>
               <div className="back">
                 <icon>
@@ -57,7 +63,7 @@ export const Projects = () => {
           <div className="box">
             <div className="card">
               <div className="front">
-                <img src="./4.png" />
+                <img src={image4} />
               </div>
               <div className="back">
                 <icon>
@@ -72,7 +78,7 @@ export const Projects = () => {
           <div className="box">
             <div className="card">
               <div className="front">
-                <img src="./5.png" />
+                <img src={image5} />
               </div>
               <div className="back">
                 <icon>
@@ -87,7 +93,7 @@ export const Projects = () => {
           <div className="box">
             <div className="card">
               <div className="front">
-                <img src="./1.png" />
+                <img src={image1} />
               </div>
               <div className="back">
                 <icon>
@@ -103,7 +109,7 @@ export const Projects = () => {
           <div className="box">
             <div className="card">
               <div className="front">
-                <img src="./1.png" />
+                <img src={image1} />
               </div>
               <div className="back">
                 <icon>
@@ -119,7 +125,7 @@ export const Projects = () => {
           <div className="box">
             <div className="card">
               <div className="front">
-                <img src="./1.png" />
+                <img src={image1} />
               </div>
               <div className="back">
                 <icon>
