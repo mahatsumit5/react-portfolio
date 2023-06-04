@@ -263,25 +263,26 @@ header {
 .menu > .navigation > li {
   font-family: Impact, Charcoal, sans-serif;
   letter-spacing: 6px;
-  padding: 20px 2px;
+  padding: 20px 20px;
 
   font-style: normal;
   font-variant: small-caps;
   text-transform: uppercase;
-  margin: 0 1rem;
+  margin: 1rem 2rem;
   font-size: 1.2rem;
   color: var(--dominant-color);
   /* background-color: var(--accent-color); */
 }
 
 .navigation li a {
-  transition: all 1s;
+  transition: all 100ms;
+  gap: 5rem;
 }
 .navigation li:hover {
   cursor: pointer;
   font-style: normal;
-  text-decoration: underline;
-  color: var(--color-dark);
+  color: var(--dominant-color);
+  border-style: solid;
 }
 
 /* <!-- hero section --> */
@@ -571,12 +572,12 @@ img {
   /* border-style: dashed; */
   position: relative;
   top: 5vh;
-  min-height: 30vh;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  padding: 0rem 0 1rem 0;
+  padding: 5rem 0 1rem 0;
   width: 100%;
+  margin-top: 5em;
 }
 
 .contact > .item1 {
@@ -699,18 +700,15 @@ input[type="submit"]:hover {
 /* <!-- footer section --> */
 footer {
   /* color: var(--secondary-color); */
-  gap: 1rem;
   display: flex;
   position: relative;
   flex-direction: column;
   top: 10vh;
   justify-content: space-between;
-  /* border-style: dashed; */
   min-height: 10vh;
-  /* background-color: #020000; */
   color: var(--dominant-color);
   align-items: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   width: 100%;
 
   background: linear-gradient(
@@ -721,14 +719,17 @@ footer {
   );
 }
 footer > .div1 {
+  width: 100%;
   /* border-style: dotted; */
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-around;
+  gap: 10rem;
 }
 ol {
+  display: flex;
   list-style: none;
   padding: 1rem;
-  gap: 1rem;
+  gap: 2rem;
+  font-size: large;
 }
 
 /* Styles for gallery */
