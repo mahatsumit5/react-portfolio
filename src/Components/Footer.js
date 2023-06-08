@@ -2,7 +2,7 @@ export const Footer = () => {
   return (
     <>
       <footer>
-        <div className="div1 flex">
+        <div className=" div1 flex">
           <div className="link1">
             <h3>Get in Touch with Me</h3>
             <ol className="links">
@@ -55,25 +55,6 @@ export const Footer = () => {
                   </a>
                 </li>
               </a>
-            </ol>
-          </div>
-          <div className="link2">
-            <ol>
-              <li>
-                <a href="#hero">Home</a>
-              </li>
-              <li>
-                <a href="#skills">Skills</a>
-              </li>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
             </ol>
           </div>
         </div>

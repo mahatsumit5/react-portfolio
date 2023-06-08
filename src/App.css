@@ -281,8 +281,7 @@ header {
 .navigation li:hover {
   cursor: pointer;
   font-style: normal;
-  color: var(--dominant-color);
-  border-style: solid;
+  color: var(--backup-color);
 }
 
 /* <!-- hero section --> */

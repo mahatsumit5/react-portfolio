@@ -1,4 +1,6 @@
-import { MenuItem } from "./MenuItem";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 export const NavBar = () => {
   const menuItems = [
     {
@@ -24,19 +26,26 @@ export const NavBar = () => {
   ];
   return (
     <header>
-      <div className="flex header" id="header">
-        <div className="menu">
-          {/* <label for="check" className="menu-icon" id="menu-icon">
-            <i className="fa-solid fa-bars"></i>
-          </label> */}
-
-          <ul className="navigation flex">
-            {menuItems.map((item) => (
-              <MenuItem href={item.href} label={item.label} />
-            ))}
-          </ul>
-        </div>
-      </div>
+      <Navbar bg="light" expand="lg">
+        <Container fluid>
+          <Navbar.Brand href="#">Sumit Mahat | Portfolio</Navbar.Brand>
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md}`} />
+          <Navbar.Offcanvas
+            id={`offcanvasNavbar-expand-md`}
+            aria-labelledby={`offcanvasNavbarLabel-expand-md`}
+            placement="end"
+          >
+            <Nav
+              className="me-auto my-2 my-lg-0 m-2"
+              style={{ maxHeight: "100px" }}
+            >
+              {menuItems.map((item) => (
+                <Nav.Link href={item.href}>{item.label}</Nav.Link>
+              ))}
+            </Nav>
+          </Navbar.Offcanvas>
+        </Container>
+      </Navbar>
     </header>
   );
 };
