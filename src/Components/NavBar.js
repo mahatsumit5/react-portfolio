@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 export const NavBar = () => {
   const menuItems = [
     {
-      href: "/home",
+      href: "#home",
       label: "Home",
     },
     {
@@ -26,13 +26,17 @@ export const NavBar = () => {
   ];
   return (
     <header>
-      <Navbar bg="light" expand="lg">
+      <Navbar
+        className="d-flex jusitfy-content-space-between"
+        bg="light"
+        expand="lg"
+      >
         <Container fluid>
           <Navbar.Brand href="#">Sumit Mahat | Portfolio</Navbar.Brand>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md}`} />
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-sm}`} />
           <Navbar.Offcanvas
-            id={`offcanvasNavbar-expand-md`}
-            aria-labelledby={`offcanvasNavbarLabel-expand-md`}
+            id={`offcanvasNavbar-expand-sm`}
+            aria-labelledby={`offcanvasNavbarLabel-expand-sm`}
             placement="end"
           >
             <Nav
