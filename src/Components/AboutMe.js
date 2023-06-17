@@ -1,4 +1,4 @@
-import mypic from "../assests/mypic.png";
+import mypic from "../assests/mypic.JPG";
 
 export const AboutMe = () => {
   return (
