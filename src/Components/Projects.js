@@ -54,7 +54,8 @@ export const Projects = () => {
       <div className="projects flex" id="projects">
         <h1>My Projects</h1>
 
-        <Carousel>
+        <Carousel className="">
+          s
           {projects.map((image, index) => (
             <Carousel.Item>
               <img

@@ -27,24 +27,25 @@ export const NavBar = () => {
   return (
     <header>
       <Navbar
-        className="d-flex jusitfy-content-space-between"
-        bg="light"
+        className="d-flex jusitfy-content-center"
         expand="lg"
+        sticky="top"
       >
-        <Container fluid>
-          <Navbar.Brand href="#">Sumit Mahat | Portfolio</Navbar.Brand>
+        <Container fluid p-5>
+          <div>
+            <Navbar.Brand href="#">Sumit Mahat | Portfolio</Navbar.Brand>
+          </div>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-sm}`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-sm`}
             aria-labelledby={`offcanvasNavbarLabel-expand-sm`}
             placement="end"
           >
-            <Nav
-              className="me-auto my-2 my-lg-0 m-2"
-              style={{ maxHeight: "100px" }}
-            >
-              {menuItems.map((item) => (
-                <Nav.Link href={item.href}>{item.label}</Nav.Link>
+            <Nav>
+              {menuItems.map((item, index) => (
+                <Nav.Link key={index} href={item.href}>
+                  {item.label}
+                </Nav.Link>
               ))}
             </Nav>
           </Navbar.Offcanvas>

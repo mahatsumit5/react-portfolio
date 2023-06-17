@@ -3,11 +3,14 @@ export const Home = () => {
   return (
     <>
       <section>
-        <video src={video} autoPlay loop muted playsInline />
+        <div className="videoContainer">
+          <video src={video} autoPlay loop muted playsInline />
+        </div>
 
-        <div>
+        <div className="intro">
           <h1>Sumit Mahat</h1>
-          <h2>Full Stack Developer</h2>
+          <h1>Full Stack Developer</h1>
+          <br></br>
           <h3>Sydney, Australia</h3>
           <br></br>
           <p>
@@ -15,8 +18,8 @@ export const Home = () => {
             welcome you to my personal portfolio.
           </p>
           <hr />
-          <button className="button2">
-            View my Work <i class="fa-solid fa-arrow-right"></i>
+          <button className="button">
+            Hire me <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
       </section>

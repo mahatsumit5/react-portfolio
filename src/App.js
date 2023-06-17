@@ -3,6 +3,7 @@ import { Hero } from "./Components/Hero";
 import { NavBar } from "./Components/NavBar";
 import { Home } from "./Components/Home";
 import { Skills } from "./Components/Skills";
+import { SideMenu } from "./Components/SideMenu";
 import { Projects } from "./Components/Projects";
 import { AboutMe } from "./Components/AboutMe";
 import { Source } from "./Components/SourceCode";
@@ -14,28 +15,16 @@ import "./App.css";
 
 function App() {
   return (
-    <div>
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="hero" element={<Hero />} />
-        <Route path="skills" element={<Skills />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="about" element={<AboutMe />} />
-        <Route path="contact" element={<Contact />} />
-      </Routes> */}
-      <Home />
+    <div className="relative">
+      {/* <Home /> */}
       <NavBar />
-
+      <SideMenu />
       <Hero />
-
       <Skills />
-
-      <Projects />
-
+      {/* <Projects /> */}
       <AboutMe />
-
       <Contact />
-      <Source />
+      {/*<Source /> */}
       <Footer />
     </div>
   );
