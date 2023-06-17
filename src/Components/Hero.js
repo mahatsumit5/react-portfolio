@@ -1,4 +1,4 @@
-import pic from "../assests/mypic.JPG";
+import pic from "../assests/mypic.png";
 import { Banner } from "./Banner";
 
 export const Hero = () => {
