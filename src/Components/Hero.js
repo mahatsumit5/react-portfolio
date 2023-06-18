@@ -11,7 +11,7 @@ JavaScript, BoostTrap, React and familiar with Angular.JS and
 Node.Js.`;
   return (
     <>
-      <div className="hero flex" id="hero">
+      <div className="hero flex" id="#home">
         <div className="flex">
           <div className="flex">
             <h1>HI, I'M SUMIT MAHAT</h1>

@@ -16,6 +16,10 @@ export const SideMenu = () => {
       link: "www.telegram.com",
       className: "fa-brands fa-telegram",
     },
+    {
+      link: "www.telegram.com",
+      className: "fa-brands fa-github",
+    },
   ];
   return (
     <div className="SideMenu">

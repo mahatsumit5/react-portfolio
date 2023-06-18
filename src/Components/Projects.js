@@ -5,8 +5,8 @@ import image3 from "../assests/3.png";
 import image5 from "../assests/5.png";
 import image6 from "../assests/6.png";
 import image7 from "../assests/7.png";
+import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-// import React from "react";
 
 export const Projects = () => {
   const projects = [
@@ -51,11 +51,10 @@ export const Projects = () => {
   ];
   return (
     <>
-      <div className="projects flex" id="projects">
+      <div className="projects flex" id="#projects">
         <h1>My Projects</h1>
 
         <Carousel className="">
-          s
           {projects.map((image, index) => (
             <Carousel.Item>
               <img

@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 export const NavBar = () => {
   const menuItems = [
     {
-      href: "#home",
+      href: "/home",
       label: "Home",
     },
     {

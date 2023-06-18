@@ -1,7 +1,7 @@
 export const Skills = () => {
   return (
     <>
-      <div className="skills flex" id="skills">
+      <div className="skills flex" id="#skills">
         <h1>Skills</h1>
         <div className="flex">
           <div className="item">

@@ -1,7 +1,7 @@
 import { Contact } from "./Components/Contact";
 import { Hero } from "./Components/Hero";
 import { NavBar } from "./Components/NavBar";
-import { Home } from "./Components/Home";
+import LandingPage from "./Components/LandingPage";
 import { Skills } from "./Components/Skills";
 import { SideMenu } from "./Components/SideMenu";
 import { Projects } from "./Components/Projects";
@@ -15,13 +15,13 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="relative">
-      {/* <Home /> */}
+    <div>
+      <LandingPage />
       <NavBar />
       <SideMenu />
       <Hero />
       <Skills />
-      {/* <Projects /> */}
+      <Projects />
       <AboutMe />
       <Contact />
       {/*<Source /> */}

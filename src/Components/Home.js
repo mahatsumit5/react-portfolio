@@ -3,9 +3,9 @@ export const Home = () => {
   return (
     <>
       <section>
-        <div className="videoContainer">
+        {/* <div className="videoContainer">
           <video src={video} autoPlay loop muted playsInline />
-        </div>
+        </div> */}
 
         <div className="intro">
           <h1>Sumit Mahat</h1>

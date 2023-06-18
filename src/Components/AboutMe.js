@@ -3,11 +3,11 @@ import mypic from "../assests/mypic.png";
 export const AboutMe = () => {
   return (
     <>
-      <div className="about flex" id="about">
+      <div className="about flex" id="#about">
         <h1>About Me</h1>
         <div className="flex">
           <div className="item1 flex">
-            <img src={mypic} alt="..." />
+            <img src={mypic} alt=".pic." />
           </div>
           <div className="item2 flex">
             <h1>Sumit Mahat</h1>
