@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { CarouselItem } from "./Carousel-Item";
 import image1 from "../assests/1.png";
 import image2 from "../assests/2.png";
 import image3 from "../assests/3.png";
@@ -34,7 +33,7 @@ const Images = [
     id: 3,
     src: image3,
     alt: "Image 3",
-    title: "Iconic Studio landing page",
+    title: "IconicStudio page",
     description:
       "This was built using simple html page and designed using CSS.",
     chrome: "",
@@ -92,12 +91,12 @@ const Carousel = () => {
   // const renderImages = () =>
   //   images.map((image, index) => <CarouselItem key={index} image={image} />);
   return (
-    <div className="content">
-      <h1 className="header">My Projects</h1>
+    <div className="content" id="projects">
+      <h1 className="darkheading header">My Projects</h1>
       <div className="container">
         <Slider {...settings}>
           {Images.map((item) => (
-            <div key={item.id}>
+            <div key={item.id} className="item d-flex flex-column">
               <img src={item.src} alt={item.alt} className="img" />
               <h2 className="title">{item.title}</h2>
               <p className="description">{item.description}</p>
