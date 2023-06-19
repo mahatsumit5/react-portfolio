@@ -3,7 +3,7 @@ import video from "../assests/video.mp4";
 import mypic from "../assests/mypic.png";
 const LandingPage = () => {
   return (
-    <div className="landingPage">
+    <div className="landingPage" id="hero">
       <video src={video} autoPlay loop muted playsInline />
 
       <div className="intro">

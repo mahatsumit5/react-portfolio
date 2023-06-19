@@ -3,7 +3,7 @@ export const Contact = () => {
   return (
     <>
       {" "}
-      <div className="container-fluid contact flex" id="#contact">
+      <div className="container-fluid contact flex" id="contact">
         <h1> Want to get in touch?</h1>
         <h1> Drop me a line!</h1>
 

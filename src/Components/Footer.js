@@ -1,3 +1,5 @@
+import { GoUp } from "./GoUp";
+
 export const Footer = () => {
   return (
     <>
@@ -59,6 +61,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="div2">Copyrights To Sumit Mahat</div>
+        <GoUp />
       </footer>
     </>
   );

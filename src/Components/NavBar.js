@@ -1,26 +1,29 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import logo from "../assests/logo.png";
+import { useState } from "react";
 export const NavBar = () => {
   const menuItems = [
     {
-      href: "/home",
+      href: "#home",
       label: "Home",
+      icon: "fa-solid fa-house",
     },
     {
-      href: "/skills",
+      href: "#skills",
       label: "Skills",
     },
     {
-      href: "/projects",
+      href: "#projects",
       label: "Projects",
     },
     {
-      href: "/about",
+      href: "#about",
       label: "About Me",
     },
     {
-      href: "/contact",
+      href: "#contact",
       label: "Contact",
     },
   ];
@@ -33,9 +36,11 @@ export const NavBar = () => {
       >
         <Container fluid p-5>
           <div>
-            <Navbar.Brand href="#">Sumit Mahat | Portfolio</Navbar.Brand>
+            <Navbar.Brand href="#">
+              <img className="logo" src={logo} alt="logo" />
+            </Navbar.Brand>
           </div>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-sm}`} />
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md}`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-sm`}
             aria-labelledby={`offcanvasNavbarLabel-expand-sm`}
@@ -44,6 +49,7 @@ export const NavBar = () => {
             <Nav>
               {menuItems.map((item, index) => (
                 <Nav.Link key={index} href={item.href}>
+                  <i class={item.icon}></i>
                   {item.label}
                 </Nav.Link>
               ))}
