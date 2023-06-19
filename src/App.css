@@ -49,7 +49,9 @@ p {
   font-variant: normal;
   text-transform: none;
 }
-
+.container-fluid {
+  --bs-gutter-x: 0;
+}
 /* landing page or section */
 .landingPage {
   position: relative;
@@ -512,6 +514,7 @@ h2 {
   font-size: 1.3rem;
   font-size: bolder;
 }
+
 /* <!-- contact me --> */
 /* <!-- contact me --> */
 /* <!-- contact me --> */
@@ -922,4 +925,60 @@ footer > .div1 {
   .side-bar > button > a:active {
     color: red;
   }
+}
+
+/* carousel design */
+.content {
+  text-align: center;
+  margin-bottom: 30px;
+  /* background-color: #2f80ed; */
+}
+.header {
+  font-size: 42px;
+  margin: 3rem;
+}
+.img {
+  display: flex;
+  margin: 0 auto;
+  height: 40vh;
+  width: 100%;
+  border-radius: 5%;
+}
+.container {
+  margin: 0 auto;
+  width: 80%;
+  /* height: 80vh; */
+  border-color: white;
+  /* background-color: #1a1579; */
+}
+.title::first-letter {
+  color: #1a1579;
+}
+.title {
+  /* margin-left: 50px; */
+  width: 100%;
+  border-radius: 5px;
+  font-size: 33px;
+  color: #1a1579;
+}
+.description {
+  margin: 20px auto;
+  width: 80%;
+  font-size: 25px;
+  margin: 20px auto;
+  color: black;
+}
+.links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  color: #2f80ed;
+  align-items: center;
+}
+.links > li > a {
+  font-size: 2rem;
+}
+.slicks-dots {
+  color: #1a1579;
 }
