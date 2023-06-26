@@ -30,7 +30,7 @@
   position: fixed;
   top: 30vh;
   right: 0;
-
+  display: none;
   border-radius: 50%;
   z-index: 2000;
   color: white;

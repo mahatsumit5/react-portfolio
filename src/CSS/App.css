@@ -710,6 +710,9 @@ footer > .div1 {
 /* Media Query for Mobile PHones */
 
 @media only screen and (max-width: 680px) {
+  .item2 > h2 {
+    font-size: 2rem;
+  }
   .weather-container {
     width: 100vw !important;
   }
@@ -824,7 +827,7 @@ footer > .div1 {
     text-align: center;
   }
   .hero .flex .flex p {
-    text-align: center;
+    text-align: justify;
     font-size: 1rem;
   }
   .hero > .flex > div:nth-child(2) {
@@ -836,10 +839,10 @@ footer > .div1 {
     height: 100%;
   }
 
-  .hero > .flex > div:nth-child(1) > div {
+  /* .hero > .flex > div:nth-child(1) > div {
     padding-left: 50px;
-    text-align: right;
-  }
+    text-align: left;
+  } */
   .paragraph,
   .paragraph1 {
     text-align: justify;
@@ -885,6 +888,7 @@ footer > .div1 {
 
   .about > .flex > .flex {
     width: 100%;
+    padding: 25px;
   }
 
   /* Contact me */
@@ -913,16 +917,31 @@ footer > .div1 {
   /* SIDE-MENU */
   .SideMenu {
     position: fixed;
-    left: 0;
+    left: -20px;
     top: 30%;
-    /* background-color: var(--color-dark); */
+    background-color: var(--color-dark);
     color: white;
     padding: 0px;
     z-index: 1000;
-    /* border-radius: 20px; */
+    opacity: 0.3;
+  }
+  .SideMenu:hover {
+    left: 0px;
+    opacity: 0.9;
+    transition: 500ms;
   }
   .sideIcon {
     font-size: 1rem;
+  }
+
+  .goup {
+    cursor: pointer;
+    position: fixed;
+    bottom: 1rem;
+    height: 50px;
+    width: 50px;
+    font-size: 1rem;
+    padding: 15px 20px;
   }
 }
 
