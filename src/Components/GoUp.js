@@ -1,11 +1,11 @@
 import React from "react";
-
+import "../CSS/animation.css";
 export const GoUp = () => {
   return (
     <div>
       <a href="#hero">
-        <span class="goup">
-          <i class="fa-solid fa-arrow-up"></i>
+        <span className="goup">
+          <i className="fa-solid fa-arrow-up"></i>
         </span>
       </a>
     </div>

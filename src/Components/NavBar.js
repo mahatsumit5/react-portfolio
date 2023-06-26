@@ -34,7 +34,7 @@ export const NavBar = () => {
         expand="lg"
         sticky="top"
       >
-        <Container fluid p-5>
+        <Container fluid>
           <div>
             <Navbar.Brand href="#">
               <img className="logo" src={logo} alt="logo" />
@@ -49,7 +49,7 @@ export const NavBar = () => {
             <Nav>
               {menuItems.map((item, index) => (
                 <Nav.Link key={index} href={item.href}>
-                  <i class={item.icon}></i>
+                  <i className={item.icon}></i>
                   {item.label}
                 </Nav.Link>
               ))}
