@@ -9,7 +9,7 @@ export const Contact = () => {
 
         <div className="container-fluid">
           <form action="submit-form.php" method="post">
-            <label for="name">Name:</label>
+            <label htmlFor="name">Name:</label>
             <input
               className="form-control"
               type="text"
@@ -17,7 +17,7 @@ export const Contact = () => {
               name="name"
               required
             />
-            <label for="email">Email:</label>
+            <label htmlFor="email">Email:</label>
             <input
               className="form-control"
               type="email"
@@ -25,7 +25,7 @@ export const Contact = () => {
               name="email"
               required
             />
-            <label for="message">Message:</label>
+            <label htmlFor="message">Message:</label>
             <textarea
               className="form-control"
               id="message"

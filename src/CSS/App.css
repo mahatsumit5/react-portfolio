@@ -186,57 +186,34 @@ header {
   height: 50px;
   position: relative;
   bottom: 0;
-  left: 60px;
+  left: 20px;
   width: 60%;
   transition: transform 2s;
 }
 
 @keyframes onClick {
   0% {
-    position: relative;
-    left: 60px;
   }
   20% {
-    position: relative;
-    left: 120px;
   }
   40% {
-    position: relative;
-    left: 180px;
   }
   60% {
-    position: relative;
-    left: 240px;
   }
   80% {
-    position: relative;
-    left: 120px;
   }
   100% {
-    position: relative;
-    left: 60px;
   }
 }
 
 .logo:hover {
   /* border-style: solid; */
   /* border-color: #d5ded6; */
-  transform: rotate(1800deg);
-}
-.logo:active {
-  position: relative;
-  left: 50vw;
-  animation: onClick 3s infinite;
+  transform: rotate(2700deg);
 }
 
 /* <!-- hero section --> */
-/* <!-- hero section --> */
-/* <!-- hero section --> */
-/* <!-- hero section --> */
-/* <!-- hero section --> */
-/* <!-- hero section --> */
-/* <!-- hero section --> */
-/* <!-- hero section --> */
+
 .hero {
   flex-wrap: wrap;
   min-height: 60vh;
@@ -277,7 +254,7 @@ header {
   padding-bottom: 10px;
   align-items: center;
 
-  background-image: url(./assests/blob.svg);
+  background-image: url(../assests/blob.svg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -300,7 +277,6 @@ img {
 
 .button {
   border: none;
-
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -318,13 +294,11 @@ div .button {
 
 .SideMenu {
   position: fixed;
-  left: 0;
+  left: -1px;
   top: 20%;
-  /* background-color: var(--color-dark); */
   color: white;
   padding: 5px;
-  z-index: 1000;
-  /* border-radius: 20px; */
+  z-index: 1;
 }
 .SideMenu > :nth-child(3) {
   background: #f09433;
@@ -354,11 +328,15 @@ div .button {
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
+.fa-left {
+  position: fixed;
+  color: #1a1579;
+  bottom: 50%;
+  right: 50%;
+  font-size: 4rem;
+  z-index: 2000;
+}
 
-/* <!-- banner Section --> */
-/* <!-- banner Section --> */
-/* <!-- banner Section --> */
-/* <!-- banner Section --> */
 /* <!-- banner Section --> */
 
 .banner {
@@ -377,7 +355,6 @@ div .button {
   width: 100%;
   border-radius: 80px;
   color: var(--backup-color);
-  /* border-style: solid; */
   border-color: var(--secondary-color);
   justify-content: space-between;
   align-items: center;
@@ -616,35 +593,6 @@ H3 {
   align-items: center;
 }
 
-/* goup Button */
-
-.goup {
-  position: fixed;
-  bottom: 7rem;
-  right: 1rem;
-  height: 80px;
-  width: 80px;
-  background-color: var(--color-dark);
-  border-radius: 50%;
-  z-index: 2000;
-  color: white;
-  padding: 1.3rem 1.7rem;
-  font-size: 2rem;
-  animation: goup;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes goup {
-  from {
-    bottom: 3rem;
-  }
-  to {
-    bottom: 3.5rem;
-    color: black;
-  }
-}
 /* Foorm Design */
 
 form {
@@ -762,6 +710,12 @@ footer > .div1 {
 /* Media Query for Mobile PHones */
 
 @media only screen and (max-width: 680px) {
+  .item2 > h2 {
+    font-size: 2rem;
+  }
+  .weather-container {
+    width: 100vw !important;
+  }
   .landingPage > div {
     /* border-style: solid; */
     /* position: relative; */
@@ -873,7 +827,7 @@ footer > .div1 {
     text-align: center;
   }
   .hero .flex .flex p {
-    text-align: center;
+    text-align: justify;
     font-size: 1rem;
   }
   .hero > .flex > div:nth-child(2) {
@@ -885,10 +839,10 @@ footer > .div1 {
     height: 100%;
   }
 
-  .hero > .flex > div:nth-child(1) > div {
+  /* .hero > .flex > div:nth-child(1) > div {
     padding-left: 50px;
-    text-align: right;
-  }
+    text-align: left;
+  } */
   .paragraph,
   .paragraph1 {
     text-align: justify;
@@ -934,6 +888,7 @@ footer > .div1 {
 
   .about > .flex > .flex {
     width: 100%;
+    padding: 25px;
   }
 
   /* Contact me */
@@ -962,16 +917,31 @@ footer > .div1 {
   /* SIDE-MENU */
   .SideMenu {
     position: fixed;
-    left: 0;
+    left: -20px;
     top: 30%;
-    /* background-color: var(--color-dark); */
+    background-color: var(--color-dark);
     color: white;
     padding: 0px;
     z-index: 1000;
-    /* border-radius: 20px; */
+    opacity: 0.3;
+  }
+  .SideMenu:hover {
+    left: 0px;
+    opacity: 0.9;
+    transition: 500ms;
   }
   .sideIcon {
     font-size: 1rem;
+  }
+
+  .goup {
+    cursor: pointer;
+    position: fixed;
+    bottom: 1rem;
+    height: 50px;
+    width: 50px;
+    font-size: 1rem;
+    padding: 15px 20px;
   }
 }
 

@@ -100,15 +100,15 @@ const Carousel = () => {
               <img src={item.src} alt={item.alt} className="img" />
               <h2 className="title">{item.title}</h2>
               <p className="description">{item.description}</p>
-              <ul class="links">
+              <ul className="links">
                 <li>
                   <a href={item.chrome} target="blank">
-                    <i class="fa-brands fa-chrome"></i>
+                    <i className="fa-brands fa-chrome"></i>
                   </a>
                 </li>
                 <li>
                   <a href={item.github} target="blank">
-                    <i class="fa-brands fa-github"></i>
+                    <i className="fa-brands fa-github"></i>
                   </a>
                 </li>
               </ul>

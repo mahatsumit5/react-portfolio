@@ -8,19 +8,19 @@ import { AboutMe } from "./Components/AboutMe";
 import { Footer } from "./Components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "./Components/Carousel";
-import "./App.css";
+import "./CSS/App.css";
 import { Container } from "react-bootstrap";
-
+import Weather from "./Components/Weather";
 function App() {
   return (
-    <Container fluid m-0>
+    <Container fluid>
       <LandingPage />
       <NavBar />
       <SideMenu />
       <Hero />
       <Skills />
       <AboutMe />
-
+      <Weather />
       <Carousel />
       <Contact />
       <Footer />
