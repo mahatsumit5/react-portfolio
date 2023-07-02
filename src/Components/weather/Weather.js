@@ -1,67 +1,75 @@
-import React from "react";
 import { useState } from "react";
-import "../CSS/weather.css";
-import { Button } from "react-bootstrap";
-import { Row, Col, Container, Form } from "react-bootstrap";
-import { BsFillArrowLeftCircleFill } from "react-icons/bs";
-import { AiOutlineClose } from "react-icons/ai";
-
-import { fetchData } from "../axios/axiosHelper";
-const Weather = () => {
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import React, { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getWeatherData } from "./weatherAction";
+import "../../CSS/weather.css";
+export const Weather = () => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const dispatch = useDispatch();
+  const { weather } = useSelector((state) => state.localStorageWeatherData);
   const [weatherData, setWeatherData] = useState(null);
   const [location, setLocation] = useState(null);
-  const [forecast, setforecast] = useState([null]);
+  const [forecast, setforecast] = useState([]);
   const [hourforecast, sethourforecast] = useState([null]);
-  const [city, setCity] = useState("Sydney");
+  const [city, setCity] = useState("");
+  useEffect(() => {
+    setWeatherData(weather.current);
+    setLocation(weather.location);
 
+    setforecast(weather.forecast.forecastday);
+    sethourforecast(weather.forecast.forecastday[0].hour);
+  }, [weather]);
+  console.log(weather);
   const handleInputChange = (e) => {
     setCity(e.target.value);
   };
 
-  const handleOnSubmit = async (e) => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
-    const data = await fetchData(city);
-    setWeatherData(data.data.current);
-    setLocation(data.data.location);
-    setforecast(data.data.forecast.forecastday);
-    sethourforecast(data.data.forecast.forecastday[0].hour);
-    console.log(data);
+
+    dispatch(getWeatherData(city));
   };
-  console.log(hourforecast);
 
   return (
     <>
-      <div>
-        {" "}
-        <label htmlFor="checkbox" className="checkbox">
-          <BsFillArrowLeftCircleFill />{" "}
-        </label>
-        <input type="checkbox" id="checkbox" className="checkbox"></input>
-        <Container className="weather-container">
-          <input type="checkbox" id="close" className="close"></input>
-
-          <label className="close" htmlFor="close">
-            <AiOutlineClose />
-          </label>
-          <Row className="weatherHeading">
-            <h1>Today's Weather</h1>
-            <div className="imageBox">
+      <Button variant="primary" onClick={handleShow} className="me-2 checkbox">
+        hell
+      </Button>
+      <Offcanvas
+        show={show}
+        onHide={handleClose}
+        placement="end"
+        backdrop="true"
+        scroll="true"
+        className="weather-container"
+      >
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>
+            {!weatherData ? (
+              <p>no image</p>
+            ) : (
               <img
-                src={weatherData && weatherData.condition.icon}
+                src={weatherData.condition.icon}
                 alt="icon"
                 className="icon"
               />
-            </div>
-          </Row>
-          <Row className="search">
+            )}
+          </Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Row className="">
             <Form onSubmit={handleOnSubmit} className="weatherForm">
-              {" "}
               <input
                 type="text"
                 className="inputCity"
                 placeholder="Enter City Name"
                 onChange={handleInputChange}
-                defaultValue="Sydney"
               ></input>
               <Button className="submitButton" type="submit">
                 Search
@@ -75,7 +83,7 @@ const Weather = () => {
               <p className="text">{location && location.localtime}</p>{" "}
               <p className="text1 temp">
                 {weatherData && weatherData.temp_c}&#8451;
-              </p>{" "}
+              </p>
             </Col>
             <Col className="weather">
               <p className="text1">
@@ -129,10 +137,9 @@ const Weather = () => {
               ))}
             </Row>
           </Row>
-        </Container>
-      </div>
+        </Offcanvas.Body>
+      </Offcanvas>
+      <ToastContainer />
     </>
   );
 };
-
-export default Weather;

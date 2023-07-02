@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "./Components/Carousel";
 import "./CSS/App.css";
 import { Container } from "react-bootstrap";
-import Weather from "./Components/Weather";
+import { Weather } from "./Components/weather/Weather";
 function App() {
   return (
     <Container fluid>

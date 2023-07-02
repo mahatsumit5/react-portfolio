@@ -11,9 +11,7 @@ export const fetchData = async (city) => {
       },
     };
     const { data } = await axios.post(api, location, options);
-    if (data === "error") {
-      console.log(data);
-    }
+
     return data;
   } catch (error) {
     return {

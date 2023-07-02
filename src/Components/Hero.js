@@ -1,6 +1,5 @@
 import { Button } from "react-bootstrap";
 import pic from "../assests/mypic.png";
-import { Banner } from "./Banner";
 import { useState } from "react";
 
 export const Hero = () => {
@@ -14,7 +13,7 @@ Node.Js.`;
   const [className, setClassName] = useState("paragraph1");
   const [button, setButtonName] = useState("Read More");
   const handleOnClick = () => {
-    if (className == "paragraph1") {
+    if (className === "paragraph1") {
       setClassName("paragraph");
       setButtonName("Read Less");
     } else {

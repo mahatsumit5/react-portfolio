@@ -650,12 +650,7 @@ footer {
   padding: 1rem 0;
   width: 100%;
 
-  background: linear-gradient(
-    135deg,
-    rgb(88, 81, 244) 0%,
-    rgb(150, 138, 182) 71%,
-    rgb(104, 186, 165) 100%
-  );
+  background-color: #2f80ed;
 }
 footer > .div1 {
   width: 100%;
@@ -758,12 +753,12 @@ footer > .div1 {
     width: 70%;
     border-radius: 10px;
     opacity: 1;
-    background: linear-gradient(
+    /* background: linear-gradient(
       to right,
       rgb(88, 81, 244) 0%,
       rgb(150, 138, 182) 65%,
       rgb(104, 186, 165) 100%
-    );
+    ); */
   }
 
   .navbar-nav a {
