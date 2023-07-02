@@ -45,7 +45,7 @@ export const Weather = () => {
         show={show}
         onHide={handleClose}
         placement="end"
-        backdrop="true"
+        backdrop="false"
         scroll="true"
         className="weather-container"
       >
