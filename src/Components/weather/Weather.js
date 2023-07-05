@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Row, Col, Form, Button } from "react-bootstrap";
 import React, { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,19 +13,23 @@ export const Weather = () => {
   const handleShow = () => setShow(true);
   const dispatch = useDispatch();
   const { weather } = useSelector((state) => state.localStorageWeatherData);
-  const [weatherData, setWeatherData] = useState(null);
-  const [location, setLocation] = useState(null);
+  const [weatherData, setWeatherData] = useState(undefined);
+  const [location, setLocation] = useState(undefined);
   const [forecast, setforecast] = useState([]);
-  const [hourforecast, sethourforecast] = useState([null]);
+  const [hourforecast, sethourforecast] = useState([]);
   const [city, setCity] = useState("");
   useEffect(() => {
     setWeatherData(weather.current);
     setLocation(weather.location);
 
-    setforecast(weather.forecast.forecastday);
-    sethourforecast(weather.forecast.forecastday[0].hour);
+    try {
+      setforecast(weather.forecast.forecastday);
+      sethourforecast(weather.forecast.forecastday[0].hour);
+    } catch (error) {
+      console.log(error);
+    }
   }, [weather]);
-  console.log(weather);
+
   const handleInputChange = (e) => {
     setCity(e.target.value);
   };
@@ -106,18 +110,22 @@ export const Weather = () => {
             </Col>
           </Row>
           <Row className="forecast">
-            {forecast.map((item, i) => (
-              <Col className="forecastCard" key={i}>
-                <p className="text">{item && item.date}</p>
-                <p className="text">{item && item.day.condition.text}</p>
-                <p className="text">
-                  Min...{item && item.day.mintemp_c}&#8451;
-                </p>
-                <p className="text">
-                  Max...{item && item.day.maxtemp_c}&#8451;
-                </p>
-              </Col>
-            ))}
+            {!forecast ? (
+              <h1>No data</h1>
+            ) : (
+              forecast.map((item, i) => (
+                <Col className="forecastCard" key={i}>
+                  <p className="text">{item && item.date}</p>
+                  <p className="text">{item && item.day.condition.text}</p>
+                  <p className="text">
+                    Min...{item && item.day.mintemp_c}&#8451;
+                  </p>
+                  <p className="text">
+                    Max...{item && item.day.maxtemp_c}&#8451;
+                  </p>
+                </Col>
+              ))
+            )}
           </Row>
           <Row className="forecast forecast2">
             <Row className="hourlyForecast">
