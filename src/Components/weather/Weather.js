@@ -55,9 +55,7 @@ export const Weather = () => {
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
-            {!weatherData ? (
-              <p>no image</p>
-            ) : (
+            {weatherData && (
               <img
                 src={weatherData.condition.icon}
                 alt="icon"
@@ -80,71 +78,76 @@ export const Weather = () => {
               </Button>
             </Form>
           </Row>
+
           <Row className="weather-card">
-            <Col className="location">
-              <p className="text1">{location && location.name}</p>
-              <p className="text1">{location && location.country}</p>{" "}
-              <p className="text">{location && location.localtime}</p>{" "}
-              <p className="text1 temp">
-                {weatherData && weatherData.temp_c}&#8451;
-              </p>
-            </Col>
-            <Col className="weather">
-              <p className="text1">
-                {" "}
-                {weatherData && weatherData.condition.text}
-              </p>
-              <p className="text">
-                {weatherData && weatherData.feelslike_c}&#8451;
-              </p>
-              <p className="text">
-                Humidity...........{weatherData && weatherData.humidity}%
-              </p>
-              <p className="text">
-                Wind...{weatherData && weatherData.wind_kph}kph(
-                {weatherData && weatherData.wind_dir})
-              </p>{" "}
-              <p className="text">
-                Pressure...{weatherData && weatherData.pressure_in}inHg
-              </p>{" "}
-            </Col>
-          </Row>
-          <Row className="forecast">
-            {!forecast ? (
-              <h1>No data</h1>
-            ) : (
-              forecast.map((item, i) => (
-                <Col className="forecastCard" key={i}>
-                  <p className="text">{item && item.date}</p>
-                  <p className="text">{item && item.day.condition.text}</p>
-                  <p className="text">
-                    Min...{item && item.day.mintemp_c}&#8451;
-                  </p>
-                  <p className="text">
-                    Max...{item && item.day.maxtemp_c}&#8451;
+            {weatherData && (
+              <>
+                <Col className="location">
+                  <p className="text1">{location && location.name}</p>
+                  <p className="text1">{location && location.country}</p>{" "}
+                  <p className="text">{location && location.localtime}</p>{" "}
+                  <p className="text1 temp">
+                    {weatherData && weatherData.temp_c}&#8451;
                   </p>
                 </Col>
-              ))
+                <Col className="weather">
+                  <p className="text1">
+                    {weatherData && weatherData.condition.text}
+                  </p>
+                  <p className="text">
+                    {weatherData && weatherData.feelslike_c}&#8451;
+                  </p>
+                  <p className="text">
+                    {weatherData &&
+                      "Humidity..........." + weatherData.humidity + "%"}
+                  </p>
+                  <p className="text">
+                    {weatherData && " Wind..." + weatherData.wind_kph + "kph"}
+                    {weatherData && weatherData.wind_dir}
+                  </p>{" "}
+                  <p className="text">
+                    Pressure...{weatherData && weatherData.pressure_in}inHg
+                  </p>{" "}
+                </Col>
+              </>
             )}
           </Row>
-          <Row className="forecast forecast2">
-            <Row className="hourlyForecast">
-              {hourforecast.map((item, i) => (
-                <Col key={i}>
-                  <p className="text">{item && item.time.slice(11)}</p>
+          {weatherData && (
+            <>
+              <Row className="forecast">
+                {forecast.map((item, i) => (
+                  <Col className="forecastCard" key={i}>
+                    <p className="text">{item && item.date}</p>
+                    <p className="text">{item && item.day.condition.text}</p>
+                    <p className="text">
+                      Min...{item && item.day.mintemp_c}&#8451;
+                    </p>
+                    <p className="text">
+                      Max...{item && item.day.maxtemp_c}&#8451;
+                    </p>
+                  </Col>
+                ))}
+              </Row>
+              <Row className="forecast forecast2">
+                <Row className="hourlyForecast">
+                  {hourforecast.map((item, i) => (
+                    <Col key={i}>
+                      <p className="text">{item && item.time.slice(11)}</p>
 
-                  <img
-                    src={item && item.condition.icon}
-                    alt="icon"
-                    className="icon2"
-                  />
+                      <img
+                        src={item && item.condition.icon}
+                        alt="icon"
+                        className="icon2"
+                      />
 
-                  {/* <p className="text">{item && item.condition.text}</p> */}
-                  <p className="text mt-3">{item && item.temp_c}&#8451;</p>
-                </Col>
-              ))}
-            </Row>
-          </Row>
+                      {/* <p className="text">{item && item.condition.text}</p> */}
+                      <p className="text mt-3">{item && item.temp_c}&#8451;</p>
+                    </Col>
+                  ))}
+                </Row>
+              </Row>
+            </>
+          )}
         </Offcanvas.Body>
       </Offcanvas>
       <ToastContainer />
