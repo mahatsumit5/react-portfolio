@@ -9,7 +9,6 @@ import image4 from "../assests/4.png";
 import image5 from "../assests/5.png";
 import image6 from "../assests/6.png";
 import image7 from "../assests/7.png";
-// const images = [image1, image2, image3, image5, image6, image7];
 const Images = [
   {
     id: 1,
@@ -84,17 +83,15 @@ const Carousel = () => {
     speed: 1000,
     autoplay: true,
     autoplaySpeed: 2000,
-    slidesToShow: 6,
+    slidesToShow: 3,
     slideToScrool: 1,
   };
 
-  // const renderImages = () =>
-  //   images.map((image, index) => <CarouselItem key={index} image={image} />);
   return (
     <div className="content" id="projects">
       <h1 className="darkheading header">My Projects</h1>
       <div className="container">
-        <Slider {...settings}>
+        <Slider {...settings} className="gap-2">
           {Images.map((item) => (
             <div key={item.id} className="item d-flex flex-column">
               <img src={item.src} alt={item.alt} className="img" />

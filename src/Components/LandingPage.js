@@ -13,9 +13,10 @@ const LandingPage = () => {
         <h1>Sumit Mahat</h1>
         <h2>Full Stack Developer</h2>
 
-        <button className="button">
-          Hire me <i className="fa-solid fa-arrow-right"></i>
-        </button>
+        <a className="button" href="http://mail.google.com" target="blank">
+          Contact Me
+          <i className="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   );

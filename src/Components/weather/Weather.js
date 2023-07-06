@@ -43,7 +43,7 @@ export const Weather = () => {
   return (
     <>
       <Button variant="primary" onClick={handleShow} className="me-2 checkbox">
-        hell
+        <i class="fa-sharp fa-solid fa-cloud"></i>
       </Button>
       <Offcanvas
         show={show}
