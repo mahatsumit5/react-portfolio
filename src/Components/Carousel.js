@@ -9,6 +9,7 @@ import image4 from "../assests/4.png";
 import image5 from "../assests/5.png";
 import image6 from "../assests/6.png";
 import image7 from "../assests/7.png";
+import library from "../assests/library.png";
 const Images = [
   {
     id: 1,
@@ -74,6 +75,16 @@ const Images = [
     description: "Using this app you can keep track of your ",
     chrome: "https://not-todos-frontend.vercel.app/",
     github: "https://github.com/mahatsumit5/NOT-TODOS-FRONTEND",
+  },
+  {
+    id: 8,
+    src: library,
+    alt: "Image of library app",
+    title: "Library Management Application",
+    description:
+      "This app is MERN stack based application built using react and NODE.JS",
+    chrome: "https://library-app-api.onrender.com",
+    github: "https://github.com/mahatsumit5/library-App-API",
   },
 ];
 const Carousel = () => {
