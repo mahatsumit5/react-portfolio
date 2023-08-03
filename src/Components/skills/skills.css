@@ -1,0 +1,28 @@
+.skills {
+  width: 90%;
+}
+.skills > .flex {
+  width: 100%;
+}
+.html {
+  color: orange;
+}
+.css {
+  color: blue;
+}
+.react {
+  color: #496bbb;
+}
+.github {
+  color: black;
+}
+
+.bootstrap {
+  color: rgb(41, 41, 171);
+}
+.js {
+  color: rgb(199, 199, 54);
+}
+.node {
+  color: rgba(2, 85, 2, 0.66);
+}

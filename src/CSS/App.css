@@ -1,12 +1,11 @@
 /* default section */
 
 :root {
-  --color-lightblue: #9593d9;
-  --secondary-color: #7c90db;
-  --dominant-color: #e5beed;
-  --accent-color: #736b92;
-  --backup-color: #7d5c65;
-  --color-dark: #0e096ec9;
+  --color-dark: #191919;
+  --secondary-color: #ffffff;
+  --dominant-color: #191919;
+  --accent-color: #e6e8e6;
+  --backup-color: #f15025;
   --text-color: var(--secondary-color);
   --border-color: var(--backup-color);
   --dark-bg: var(--color-dark);
@@ -134,7 +133,7 @@ h2::first-letter {
 header {
   position: sticky;
   top: 0;
-  background-color: var(--color-lightblue);
+  background-color: var(--color-dark);
   width: 100%;
   height: 8vh;
   z-index: 100;
@@ -219,11 +218,10 @@ header {
   min-height: 60vh;
   justify-content: flex-start;
   width: 100%;
-  background-color: var(--color-lightblue);
+  background-color: var(--color-dark);
 }
 .hero > .flex {
   width: 100%;
-  background-color: var(#2f80ed);
   justify-content: space-between;
   padding: 50px 1rem;
   color: var(--secondary-color);
@@ -374,7 +372,7 @@ div .button {
 .banner > div {
   display: flex;
   padding: 10px 50px 10px 50px;
-  background-color: white;
+  /* background-color: white; */
   width: 100%;
   border-radius: 80px;
   color: var(--backup-color);
@@ -413,7 +411,7 @@ H3 {
 .banner > div > .info-divider {
   width: 2px;
   height: 50px;
-  background-color: var(--color-lightblue);
+  background-color: var(--color-dark);
 }
 /* <!-- Skills Section--> */
 /* <!-- Skills Section--> */
@@ -433,7 +431,7 @@ H3 {
 }
 
 .skills > .flex {
-  color: var(--secondary-color);
+  color: var(--accent-color);
   width: 100%;
   border-radius: 20px;
   /* background-color: var(--color-blue); */
@@ -455,9 +453,7 @@ H3 {
 }
 
 .item > .button {
-  background-color: var(--secondary-color);
   border: none;
-
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -511,7 +507,7 @@ H3 {
 .about {
   /* border-style: dashed; */
   width: 100%;
-  background-color: var(--color-lightblue);
+  background-color: var(--color-dark);
   justify-content: flex-start;
   align-items: center;
   min-height: 50vh;
@@ -590,7 +586,7 @@ H3 {
 }
 
 .contact > .item1 {
-  color: var(--color-lightblue);
+  color: var(--color-dark);
   gap: 1rem;
   font-size: 4rem;
   width: 80%;
@@ -642,7 +638,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: var(--color-lightblue);
+  background-color: var(--color-dark);
   color: white;
   border: none;
   border-radius: 5px;
@@ -673,7 +669,7 @@ footer {
   padding: 1rem 0;
   width: 100%;
 
-  background-color: #2f80ed;
+  background-color: var(--color-dark);
 }
 footer > .div1 {
   width: 100%;
@@ -706,7 +702,7 @@ footer > .div1 {
   padding: 1rem;
 }
 .box > div {
-  background-color: rgb(213, 227, 223);
+  /* background-color: rgb(213, 227, 223); */
   background-size: cover;
   background-repeat: no-repeat;
   height: 350px;
@@ -878,21 +874,10 @@ footer > .div1 {
   .banner > div > .info-divider {
     width: 300px;
     height: 4px;
-    background-color: var(--color-lightblue);
+    background-color: var(--color-dark);
   }
 
   /* Skills Section */
-  .skills {
-    width: 90%;
-  }
-  .skills > .flex {
-    width: 100%;
-  }
-
-  /* Projects Section */
-  .projects {
-    width: 90%;
-  }
 
   /* About me */
 
@@ -967,7 +952,7 @@ footer > .div1 {
 .content {
   text-align: center;
   margin-bottom: 30px;
-  /* background-color: var(--color-lightblue) */
+  /* background-color: var(--color-dark) */
 }
 .header {
   font-size: 42px;
@@ -1008,7 +993,7 @@ footer > .div1 {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  color: var(--color-lightblue);
+  color: var(--color-dark);
   align-items: center;
 }
 .link1 > .links > li > a {
