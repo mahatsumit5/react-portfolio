@@ -25,9 +25,7 @@ export const Weather = () => {
     try {
       setforecast(weather.forecast.forecastday);
       sethourforecast(weather.forecast.forecastday[0].hour);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   }, [weather]);
 
   const handleInputChange = (e) => {
@@ -49,7 +47,7 @@ export const Weather = () => {
         show={show}
         onHide={handleClose}
         placement="end"
-        backdrop="false"
+        backdrop={false}
         scroll="true"
         className="weather-container"
       >

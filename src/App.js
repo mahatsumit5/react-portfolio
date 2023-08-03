@@ -15,7 +15,6 @@ function App() {
   return (
     <Container fluid>
       <LandingPage />
-      <NavBar />
       <SideMenu />
       <Hero />
       <Skills />

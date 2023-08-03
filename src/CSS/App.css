@@ -1,11 +1,11 @@
 /* default section */
 
 :root {
-  --color-lightblue: #2f80ed;
-  --secondary-color: #5851f4;
-  --dominant-color: #fafafa;
-  --accent-color: #968ab6;
-  --backup-color: #0e096ec9;
+  --color-lightblue: #9593d9;
+  --secondary-color: #7c90db;
+  --dominant-color: #e5beed;
+  --accent-color: #736b92;
+  --backup-color: #7d5c65;
   --color-dark: #0e096ec9;
   --text-color: var(--secondary-color);
   --border-color: var(--backup-color);
@@ -134,12 +134,12 @@ h2::first-letter {
 header {
   position: sticky;
   top: 0;
-  box-shadow: 0 0 10px 5px rgba(36, 22, 111, 0.712);
-  background-color: var(--color-dark);
+  background-color: var(--color-lightblue);
   width: 100%;
   height: 8vh;
   z-index: 100;
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid white;
 }
 .header {
   justify-content: center;
@@ -177,9 +177,9 @@ header {
 }
 .navbar-nav a:hover,
 .navbar-nav a:active {
-  background-color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: 500ms;
+  border: 1px solid white;
 }
 
 .logo {
@@ -230,20 +230,23 @@ header {
   align-items: center;
 }
 .hero .flex .flex h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--dominant-color);
   font-weight: bolder;
   letter-spacing: 4.4px;
 }
 .hero .flex .flex h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
   color: var(--dominant-color);
   text-decoration: underline solid;
   letter-spacing: 4.4px;
 }
 
 .hero .flex .flex p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--dominant-color);
   letter-spacing: 2px;
 }
