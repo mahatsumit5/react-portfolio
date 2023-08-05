@@ -8,8 +8,7 @@ export const getWeatherData = (city) => async (dispatch) => {
     toast.promise(respPromise, {
       pending: "please wait....",
     });
-    const { status, message, data } = await respPromise;
-    toast[status](message);
+    const { data } = await respPromise;
 
     data && dispatch(setWeatherData(data));
     return true;

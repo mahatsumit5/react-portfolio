@@ -19,9 +19,11 @@ export const Weather = () => {
   const [hourforecast, sethourforecast] = useState([]);
   const [city, setCity] = useState("");
   useEffect(() => {
+    dispatch(getWeatherData("Sydney"));
+  }, []);
+  useEffect(() => {
     setWeatherData(weather.current);
     setLocation(weather.location);
-
     try {
       setforecast(weather.forecast.forecastday);
       sethourforecast(weather.forecast.forecastday[0].hour);
@@ -37,20 +39,21 @@ export const Weather = () => {
 
     dispatch(getWeatherData(city));
   };
+  const option = {
+    scroll: true,
+    backdrop: true,
+    placement: "end",
+    className: "weather-container",
+    show: show,
+    onHide: handleClose,
+  };
 
   return (
     <>
       <Button variant="primary" onClick={handleShow} className="me-2 checkbox">
         <i class="fa-sharp fa-solid fa-cloud"></i>
       </Button>
-      <Offcanvas
-        show={show}
-        onHide={handleClose}
-        placement="end"
-        backdrop={false}
-        scroll="true"
-        className="weather-container"
-      >
+      <Offcanvas {...option}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
             {weatherData && (

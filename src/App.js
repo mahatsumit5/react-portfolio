@@ -1,6 +1,4 @@
-import { Contact } from "./Components/Contact";
 import { Hero } from "./Components/Hero";
-import { NavBar } from "./Components/NavBar";
 import LandingPage from "./Components/LandingPage";
 import { Skills } from "./Components/skills/Skills";
 import { SideMenu } from "./Components/SideMenu";

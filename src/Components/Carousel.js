@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import image1 from "../assests/1.png";
-import image2 from "../assests/2.png";
+import image2 from "../assests/dale.png";
 import image3 from "../assests/3.png";
 import image4 from "../assests/4.png";
 import image5 from "../assests/5.png";
@@ -19,6 +19,15 @@ const Images = [
     description: "This Calculator was created using React Componentes.",
     chrome: "https://react-calculator-14ad89kd2-mahatsumit5.vercel.app/",
     github: "https://github.com/mahatsumit5/react-calculator.git",
+  },
+  {
+    id: 1,
+    src: image2,
+    alt: "Image 2",
+    title: "DALLE Image Generation",
+    description: "Built using OPENAI dalle API for image generation",
+    chrome: "https://dalle-z6rw.onrender.com/",
+    github: "https://github.com/mahatsumit5/OPENAI-DALLE.git",
   },
 
   {
