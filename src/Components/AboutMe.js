@@ -1,14 +1,23 @@
 import mypic from "../assests/mypic.png";
-
+import { motion } from "framer-motion";
 export const AboutMe = () => {
   return (
     <>
       <div className="about flex" id="about">
         <h1 className="darkheading shadow rounded p-2">About Me</h1>
         <div className="flex">
-          <div className="item1 flex">
+          <motion.div
+            className="item1 flex"
+            drag
+            dragConstraints={{
+              top: -50,
+              left: -50,
+              right: 50,
+              bottom: 50,
+            }}
+          >
             <img src={mypic} alt=".pic." />
-          </div>
+          </motion.div>
           <div className="item2 flex ">
             <h2 className="">Professional Summary</h2>
             <p className="paragraph">

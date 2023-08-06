@@ -1,9 +1,13 @@
 import { GoUp } from "./GoUp";
-
+import { motion } from "framer-motion";
 export const Footer = () => {
   return (
     <>
-      <footer>
+      <motion.footer
+        initial={{ opacity: 0 }}
+        transition={{ duration: 2 }}
+        whileInView={{ opacity: 1 }}
+      >
         <div className=" div1 flex">
           <div className="link1">
             <h3>Get in Touch with Me</h3>
@@ -54,7 +58,7 @@ export const Footer = () => {
         </div>
         <div className="div2">Copyrights To Sumit Mahat</div>
         <GoUp />
-      </footer>
+      </motion.footer>
     </>
   );
 };

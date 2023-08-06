@@ -3,17 +3,27 @@ import video from "../assests/video.mp4";
 import v from "../assests/dsaf.mp4";
 import mypic from "../assests/mypic.png";
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 
 const LandingPage = () => {
-  console.log(Typewriter);
   return (
-    <div className="landingPage" id="hero">
+    <motion.div
+      className="landingPage"
+      id="hero"
+      initial={{ opacity: 0.2 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+    >
       <video src={v} autoPlay loop muted playsInline />
 
       <div className="intro">
-        <div>
+        <motion.div
+          initial={{ x: "-50vw" }}
+          animate={{ x: 0 }}
+          transition={{ duration: 2 }}
+        >
           <img src={mypic} alt="myic" />
-        </div>
+        </motion.div>
         <h1> Hi, I am </h1>
         <h1 className="">
           <Typewriter
@@ -37,12 +47,19 @@ const LandingPage = () => {
           />
         </h1>
         <h2></h2>
-        <a className="button" href="http://mail.google.com" target="blank">
+        <motion.a
+          initial={{ y: "90vh" }}
+          animate={{ y: 0 }}
+          transition={{ duration: 1, type: "keyframes" }}
+          className="button"
+          href="http://mail.google.com"
+          target="blank"
+        >
           Contact Me
           <i className="fa-solid fa-arrow-right"></i>
-        </a>
+        </motion.a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
