@@ -1,10 +1,23 @@
+import { useEffect, useRef } from "react";
 import mypic from "../assests/mypic.png";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 export const AboutMe = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  useEffect(() => {
+    console.log("Element is in view: ", isInView);
+  }, [isInView]);
   return (
     <>
-      <div className="about flex" id="about">
-        <h1 className="darkheading shadow rounded p-2">About Me</h1>
+      <div ref={ref} className="about flex" id="about">
+        <motion.h1
+          initial={{ x: "-100vw" }}
+          animate={{ x: isInView ? 0 : "-100vw" }}
+          transition={{ duration: 0.5 }}
+          className="darkheading shadow rounded p-2"
+        >
+          About Me
+        </motion.h1>
         <div className="flex">
           <motion.div
             className="item1 flex"
@@ -19,8 +32,20 @@ export const AboutMe = () => {
             <img src={mypic} alt=".pic." />
           </motion.div>
           <div className="item2 flex ">
-            <h2 className="">Professional Summary</h2>
-            <p className="paragraph">
+            <motion.h2
+              initial={{ x: "-100vw" }}
+              animate={{ x: isInView ? 0 : "-100vw" }}
+              transition={{ duration: 0.7 }}
+              className=""
+            >
+              Professional Summary
+            </motion.h2>
+            <motion.p
+              className="paragraph"
+              initial={{ x: "-100vw" }}
+              animate={{ x: isInView ? 0 : "-100vw" }}
+              transition={{ duration: 1 }}
+            >
               Software Engineer Graduate dedicated to improving skills through
               hands-on learning and development work. Proficient in mobile and
               desktop development environments. Adept at using HTML5, JavaScript
@@ -29,7 +54,7 @@ export const AboutMe = () => {
               communication and analytical abilities. Lorem ipsum dolor sit amet
               consectetur adipisicing elit. Impedit voluptate ab deserunt quidem
               necessitatibus beatae dicta nulla iusto facilis aperiam!
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>
