@@ -53,10 +53,14 @@ const LandingPage = () => {
           <motion.a
             initial={{ y: "90vh" }}
             animate={{ y: 0 }}
-            transition={{ duration: 1, type: "keyframes" }}
+            transition={{ duration: 1, type: "spring" }}
             className="button"
             href="http://mail.google.com"
             target="blank"
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "10px 10px 0 rgba(255, 255, 255, 0.3)",
+            }}
           >
             Contact Me
             <i className="fa-solid fa-arrow-right"></i>

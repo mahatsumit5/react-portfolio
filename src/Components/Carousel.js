@@ -77,29 +77,29 @@ const Carousel = () => {
     speed: 1000,
     autoplay: true,
     autoplaySpeed: 2000,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slideToScrool: 1,
   };
 
   return (
     <div className="content" id="projects">
-      <h1 className="darkheading header  ">My Projects</h1>
+      <h1 className="darkheading header  text-light  ">My Projects</h1>
       <div className="container ">
         <Slider {...settings} className="d-flex gap-2">
           {Images.map((item) => (
             <div key={item.id} className="item d-flex flex-column ">
               <img src={item.src} alt={item.alt} className="img" />
-              <h2 className="title  p-2 ">{item.title}</h2>
-              <p className="description">{item.description}</p>
+              <h2 className="title text-light p-2 ">{item.title}</h2>
+              <p className="description text-light">{item.description}</p>
               <ul className="links">
                 <li>
                   <a href={item.chrome} target="blank">
-                    <i className="fa-brands fa-chrome"></i>
+                    <i className="fa-brands fa-chrome text-light"></i>
                   </a>
                 </li>
                 <li>
                   <a href={item.github} target="blank">
-                    <i className="fa-brands fa-github"></i>
+                    <i className="fa-brands fa-github text-light"></i>
                   </a>
                 </li>
               </ul>
