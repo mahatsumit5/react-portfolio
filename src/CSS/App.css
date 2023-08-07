@@ -45,7 +45,7 @@ h2 {
   font-family: "Times New Roman", Times, serif;
 }
 .darkheading {
-  color: var(--backup-color);
+  color: var(--accent-color);
   font-size: 3rem;
   letter-spacing: 5px;
   font-weight: 700;
@@ -89,7 +89,7 @@ Video {
   gap: 1rem;
   /* border-style: solid; */
   color: var(--dominant-color);
-  backdrop-filter: blur(4px);
+  /* backdrop-filter: blur(4px); */
   margin: 0;
 }
 .landingPage > div > div {

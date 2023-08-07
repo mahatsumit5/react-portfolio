@@ -9,17 +9,18 @@ import Carousel from "./Components/Carousel";
 import "./CSS/App.css";
 import { Container } from "react-bootstrap";
 import { Weather } from "./Components/weather/Weather";
+import { ParticlesBackground } from "./Components/particles/ParticlesBackground";
 function App() {
   return (
     <Container fluid>
+      {/* <ParticlesBackground /> */}
       <LandingPage />
       <SideMenu />
       <Hero />
       <Skills />
       <AboutMe />
-      {/* <Weather /> */}
+      <Weather />
       <Carousel />
-      {/* <Contact /> */}
       <Footer />
     </Container>
   );
