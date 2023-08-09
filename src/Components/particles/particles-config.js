@@ -26,7 +26,7 @@ const particlesConfig = {
     enable: true,
     zIndex: -1,
   },
-  detectRetina: false,
+  detectRetina: true,
   duration: 0,
   fpsLimit: 120,
   interactivity: {
@@ -333,8 +333,8 @@ const particlesConfig = {
         height: 1080,
       },
       limit: 0,
-      value: 30,
-      max: 100,
+      value: 20,
+      max: 0,
     },
     opacity: {
       random: {
@@ -577,7 +577,7 @@ const particlesConfig = {
     },
   },
   pauseOnBlur: true,
-  pauseOnOutsideViewport: true,
+  pauseOnOutsideViewport: false,
   responsive: [],
   smooth: false,
   style: {},

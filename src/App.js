@@ -12,17 +12,20 @@ import { Weather } from "./Components/weather/Weather";
 import { ParticlesBackground } from "./Components/particles/ParticlesBackground";
 function App() {
   return (
-    <Container fluid>
-      {/* <ParticlesBackground /> */}
-      <LandingPage />
-      <SideMenu />
-      <Hero />
-      <Skills />
-      <AboutMe />
-      <Weather />
-      <Carousel />
-      <Footer />
-    </Container>
+    <>
+      <ParticlesBackground />
+
+      <Container fluid>
+        <LandingPage />
+        <SideMenu />
+        <Hero />
+        <Skills />
+        <AboutMe />
+        <Weather />
+        <Carousel />
+        <Footer />
+      </Container>
+    </>
   );
 }
 

@@ -84,10 +84,10 @@ const Carousel = () => {
   return (
     <div className="content" id="projects">
       <h1 className="darkheading header  text-light  ">My Projects</h1>
-      <div className="container ">
-        <Slider {...settings} className="d-flex gap-2">
+      <div className="container d-flex justify-content-center">
+        <Slider {...settings} className="d-flex w-75  gap-2">
           {Images.map((item) => (
-            <div key={item.id} className="item d-flex flex-column ">
+            <div key={item.id} className="item d-flex flex-column  ">
               <img src={item.src} alt={item.alt} className="img" />
               <h2 className="title text-light p-2 ">{item.title}</h2>
               <p className="description text-light">{item.description}</p>

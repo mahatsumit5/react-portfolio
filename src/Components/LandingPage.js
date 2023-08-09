@@ -9,8 +9,6 @@ import { ParticlesBackground } from "./particles/ParticlesBackground";
 const LandingPage = () => {
   return (
     <>
-      <ParticlesBackground className="d-sm-none" />
-
       <motion.div
         className="landingPage"
         id="hero"

@@ -53,7 +53,7 @@ h2 {
 
 .paragraph {
   font-family: "Tsukimi Rounded", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: justify;
 }
 .paragraph1 {
@@ -114,8 +114,8 @@ Video {
 .intro h1::first-letter,
 h2::first-letter {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  font-size: 5rem;
-  color: var(--dominant-color);
+  font-size: 4rem;
+  color: white;
 }
 
 .intro h1 {
