@@ -7,8 +7,10 @@ import { Footer } from "./Components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "./Components/Carousel";
 import "./CSS/App.css";
+import "./CSS/weather.css";
 import { Container } from "react-bootstrap";
-import { Weather } from "./Components/weather/Weather";
+
+// import { Weather } from "./Components/weather/Weather";
 import { ParticlesBackground } from "./Components/particles/ParticlesBackground";
 function App() {
   return (
@@ -21,7 +23,7 @@ function App() {
         <Hero />
         <Skills />
         <AboutMe />
-        <Weather />
+        {/* <Weather /> */}
         <Carousel />
         <Footer />
       </Container>

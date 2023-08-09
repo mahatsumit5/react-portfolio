@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 export const SideMenu = () => {
   const links = [
     {
@@ -27,22 +28,23 @@ export const SideMenu = () => {
     },
   ];
   return (
-    <>
-      <div className="SideMenu">
-        {links.map((icon, index) => (
-          <div key={index} className="p-2" style={{ background: icon.color }}>
-            <a
-              href={icon.link}
-              target="_blank"
-              className="fs-3 sideIcon"
-              rel="noreferrer"
-            >
-              <i className={icon.className}></i>
-            </a>
-          </div>
-        ))}
-      </div>
-      <div></div>
-    </>
+    <motion.div
+      className="SideMenu"
+      initial={{ x: "-100vw" }}
+      animate={{ x: 0 }}
+    >
+      {links.map((icon, index) => (
+        <div key={index} className="p-2" style={{ background: icon.color }}>
+          <a
+            href={icon.link}
+            target="_blank"
+            className="fs-3 sideIcon"
+            rel="noreferrer"
+          >
+            <i className={icon.className}></i>
+          </a>
+        </div>
+      ))}
+    </motion.div>
   );
 };

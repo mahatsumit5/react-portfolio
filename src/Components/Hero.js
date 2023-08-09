@@ -5,7 +5,6 @@ import { NavBar } from "./NavBar";
 import { motion, useScroll } from "framer-motion";
 
 export const Hero = () => {
-  const { scrollYProgress } = useScroll();
   const paragraph = `Hello, I am Sumit Mahat and I am a graduate from Southern Cross
 University(2022). I am a Software Developer by profession and I am
 currently enrolled at Dented Code undertaking JRP to be a

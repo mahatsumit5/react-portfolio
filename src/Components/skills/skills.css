@@ -1,11 +1,11 @@
 .skills {
-  width: 90%;
+  width: 100%;
 }
 .skills > .flex {
   width: 100%;
 }
 .html {
-  color: orange;
+  color: rgba(243, 236, 27, 0.908);
 }
 .css {
   color: blue;
@@ -25,4 +25,16 @@
 }
 .node {
   color: rgba(100, 196, 55, 0.66);
+}
+.jira {
+  color: rgb(64, 132, 234);
+}
+.redux {
+  color: rgb(30, 154, 188);
+}
+.trello {
+  color: blue;
+}
+.figma {
+  color: white;
 }

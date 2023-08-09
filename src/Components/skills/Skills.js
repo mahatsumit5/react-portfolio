@@ -41,22 +41,26 @@ export const Skills = () => {
     {
       name: "Redux",
       icon: BiLogoRedux,
-      className: "redux",
+      className:
+        "redux p-3 d-flex justify-content-center align-items-center flex-column  shadow rounded gap-2",
     },
     {
       name: "Trello",
       icon: BiLogoTrello,
-      className: "trello",
+      className:
+        "trello p-3 d-flex justify-content-center align-items-center flex-column  shadow rounded gap-2",
     },
     {
       name: "Figma",
       icon: FiFigma,
-      className: "figma",
+      className:
+        "figma p-3 d-flex justify-content-center align-items-center flex-column  shadow rounded gap-2",
     },
     {
       name: "Jira",
       icon: SiJira,
-      className: "jira",
+      className:
+        "jira p-3 d-flex justify-content-center align-items-center flex-column  shadow rounded gap-2",
     },
   ];
 
@@ -86,7 +90,7 @@ export const Skills = () => {
               <button className=" button"> {item.iName}</button>
             </motion.div>
           ))}
-          {reactIcons.map(({ icon, name }, index) => {
+          {reactIcons.map(({ icon, name, className }, index) => {
             const Icon = icon;
             return (
               <>
@@ -96,7 +100,7 @@ export const Skills = () => {
                     y: -100,
                     boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.2)",
                   }}
-                  className="p-3 d-flex justify-content-center align-items-center flex-column  shadow rounded gap-2 "
+                  className={className}
                   key={index}
                   style={{ height: "max-content" }}
                 >

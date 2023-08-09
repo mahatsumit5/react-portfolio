@@ -7,12 +7,8 @@ export const NavBar = () => {
     {
       href: "#home",
       label: "Home",
-      icon: "fa-solid fa-house",
     },
-    {
-      href: "#skills",
-      label: "Skills",
-    },
+
     {
       href: "#projects",
       label: "Projects",
@@ -20,10 +16,6 @@ export const NavBar = () => {
     {
       href: "#about",
       label: "About Me",
-    },
-    {
-      href: "#contact",
-      label: "Contact",
     },
   ];
   return (
@@ -39,7 +31,10 @@ export const NavBar = () => {
               <img className="logo" src={logo} alt="logo" />
             </Navbar.Brand>
           </div>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md}`} />
+          <Navbar.Toggle
+            aria-controls={`offcanvasNavbar-expand-md}`}
+            className="mx-2"
+          />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-sm`}
             aria-labelledby={`offcanvasNavbarLabel-expand-sm`}

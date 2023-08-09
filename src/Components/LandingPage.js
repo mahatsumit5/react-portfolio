@@ -1,10 +1,8 @@
 import React from "react";
-import video from "../assests/video.mp4";
-import v from "../assests/dsaf.mp4";
 import mypic from "../assests/mypic.png";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
-import { ParticlesBackground } from "./particles/ParticlesBackground";
+import { CustomModal } from "./customModal/CustomModal";
 
 const LandingPage = () => {
   return (
@@ -26,7 +24,7 @@ const LandingPage = () => {
             <img src={mypic} alt="myic" />
           </motion.div>
           <h1> Hi, I am </h1>
-          <h1 className="">
+          <h1 className="typewriter">
             <Typewriter
               options={{
                 autoStart: true,
@@ -53,15 +51,12 @@ const LandingPage = () => {
             animate={{ y: 0 }}
             transition={{ duration: 1, type: "spring" }}
             className="button"
-            href="http://mail.google.com"
-            target="blank"
             whileHover={{
               scale: 1.1,
               boxShadow: "10px 10px 0 rgba(255, 255, 255, 0.3)",
             }}
           >
-            Contact Me
-            <i className="fa-solid fa-arrow-right"></i>
+            <CustomModal /> <i className="fa-solid fa-arrow-right"></i>
           </motion.a>
         </div>
       </motion.div>
