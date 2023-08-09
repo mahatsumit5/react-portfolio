@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./skills.css";
 import { BiLogoRedux, BiLogoTrello } from "react-icons/bi";
 import { FiFigma } from "react-icons/fi";
+import { SiJira } from "react-icons/si";
 import { motion, useDragControls } from "framer-motion";
 export const Skills = () => {
   const controls = useDragControls();
@@ -51,6 +52,11 @@ export const Skills = () => {
       name: "Figma",
       icon: FiFigma,
       className: "figma",
+    },
+    {
+      name: "Jira",
+      icon: SiJira,
+      className: "jira",
     },
   ];
 

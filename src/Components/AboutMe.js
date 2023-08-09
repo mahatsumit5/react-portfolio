@@ -11,6 +11,7 @@ export const AboutMe = () => {
     <>
       <div ref={ref} className="about flex" id="about">
         <motion.h1
+          ref={ref}
           initial={{ x: "-100vw" }}
           animate={{ x: isInView ? 0 : "-100vw" }}
           transition={{ duration: 0.5 }}
@@ -18,7 +19,7 @@ export const AboutMe = () => {
         >
           About Me
         </motion.h1>
-        <div className="flex">
+        <div className="flex" ref={ref}>
           <motion.div
             className="item1 flex"
             drag
@@ -31,7 +32,7 @@ export const AboutMe = () => {
           >
             <img src={mypic} alt=".pic." />
           </motion.div>
-          <div className="item2 flex ">
+          <div className="item2 flex " ref={ref}>
             <motion.h2
               initial={{ x: "-100vw" }}
               animate={{ x: isInView ? 0 : "-100vw" }}
@@ -51,9 +52,7 @@ export const AboutMe = () => {
               desktop development environments. Adept at using HTML5, JavaScript
               and other programming languages to produce clean code.
               Well-organized and collaborative team player with strong
-              communication and analytical abilities. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Impedit voluptate ab deserunt quidem
-              necessitatibus beatae dicta nulla iusto facilis aperiam!
+              communication and analytical abilities.
             </motion.p>
           </div>
         </div>
