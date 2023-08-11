@@ -1,10 +1,15 @@
 import { Button } from "react-bootstrap";
 import pic from "../assests/mypic.png";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavBar } from "./NavBar";
-import { motion, useScroll } from "framer-motion";
+import { motion, useInView, useScroll } from "framer-motion";
 
 export const Hero = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  useEffect(() => {
+    console.log("Element is in view: ", isInView);
+  }, [isInView]);
   const paragraph = `Hello, I am Sumit Mahat and I am a graduate from Southern Cross
 University(2022). I am a Software Developer by profession and I am
 currently enrolled at Dented Code undertaking JRP to be a
@@ -29,9 +34,21 @@ Node.Js.`;
       <NavBar />
       <div className="hero flex" id="home">
         <div className="flex">
-          <div className="flex">
-            <h1>HI, I'M SUMIT MAHAT</h1>
-            <h2>Full Stack Developer</h2>
+          <div className="flex" ref={ref}>
+            <motion.h1
+              initial={{ x: "-100vw" }}
+              animate={{ x: isInView ? 0 : "-100vw" }}
+              transition={{ duration: 0.5 }}
+            >
+              HI, I'M SUMIT MAHAT
+            </motion.h1>
+            <motion.h2
+              initial={{ x: 20 }}
+              animate={{ x: isInView ? 0 : "-100vw" }}
+              transition={{ duration: 0.5 }}
+            >
+              Full Stack Developer
+            </motion.h2>
 
             <div>
               <p className="paragraph">{paragraph}</p>
