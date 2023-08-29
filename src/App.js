@@ -10,7 +10,7 @@ import "./CSS/App.css";
 import "./CSS/weather.css";
 import { Container } from "react-bootstrap";
 
-// import { Weather } from "./Components/weather/Weather";
+import { Weather } from "./Components/weather/Weather";
 import { ParticlesBackground } from "./Components/particles/ParticlesBackground";
 function App() {
   return (

@@ -46,7 +46,6 @@ const LandingPage = () => {
               }}
             />
           </h1>
-          <h2></h2>
           <motion.a
             initial={{ y: "90vh" }}
             animate={{ y: 0 }}

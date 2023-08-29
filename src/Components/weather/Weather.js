@@ -20,7 +20,7 @@ export const Weather = () => {
   const [city, setCity] = useState("");
   useEffect(() => {
     dispatch(getWeatherData("Sydney"));
-  }, []);
+  }, [dispatch]);
   useEffect(() => {
     setWeatherData(weather.current);
     setLocation(weather.location);

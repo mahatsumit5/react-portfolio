@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./skills.css";
 import { BiLogoRedux, BiLogoTrello } from "react-icons/bi";
 import { FiFigma } from "react-icons/fi";
