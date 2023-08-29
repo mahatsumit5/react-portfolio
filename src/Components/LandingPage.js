@@ -33,6 +33,7 @@ const LandingPage = () => {
               }}
               onInit={(typewriter) => {
                 typewriter
+
                   .typeString("Sumit Mahat.")
                   .deleteAll()
                   .pauseFor(2500)

@@ -3,7 +3,6 @@ import pic from "../assests/mypic.png";
 import { useEffect, useRef, useState } from "react";
 import { NavBar } from "./NavBar";
 import { motion, useInView, useScroll } from "framer-motion";
-
 export const Hero = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
