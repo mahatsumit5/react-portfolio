@@ -2,18 +2,18 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import image1 from "../assests/1.png";
-import image2 from "../assests/dale.png";
-import image3 from "../assests/3.png";
-import image4 from "../assests/4.png";
-import image5 from "../assests/5.png";
-import image6 from "../assests/6.png";
-import image7 from "../assests/7.png";
+import calculator from "../assests/calculator.png";
+import dalle from "../assests/dale.png";
+import chatbot from "../assests/chatbot.png";
+import movieDB from "../assests/movieDB.png";
+import ntdl from "../assests/ntdl.png";
+import cms from "../assests/cms.jpg";
+import ecommerce from "../assests/ecommerce.jpg";
 import library from "../assests/library.png";
 const Images = [
   {
     id: 1,
-    src: image1,
+    src: calculator,
     alt: "Image 1",
     title: "React Calculator",
     description: "This Calculator was created using React Componentes.",
@@ -22,7 +22,7 @@ const Images = [
   },
   {
     id: 1,
-    src: image2,
+    src: dalle,
     alt: "Image 2",
     title: "DALLE Image Generation",
     description: "Built using OPENAI dalle API for image generation",
@@ -32,7 +32,7 @@ const Images = [
 
   {
     id: 4,
-    src: image4,
+    src: chatbot,
     alt: "Image 4",
     title: "ChatBot",
     description: "This chat bot was created using OpenAI API.",
@@ -42,7 +42,7 @@ const Images = [
 
   {
     id: 6,
-    src: image6,
+    src: movieDB,
     alt: "Image 6",
     title: "Movie Database",
     description:
@@ -52,7 +52,7 @@ const Images = [
   },
   {
     id: 7,
-    src: image7,
+    src: ntdl,
     alt: "Image 7",
     title: "NOT-TO-DO-LIST",
     description: "Using this app you can keep track of your ",
@@ -68,6 +68,26 @@ const Images = [
       "This app is MERN stack based application built using react and NODE.JS",
     chrome: "https://library-app-api.onrender.com",
     github: "https://github.com/mahatsumit5/library-App-API",
+  },
+  {
+    id: 9,
+    src: cms,
+    alt: "Ecommerce management system",
+    title: "Ecommerce Management System",
+    description:
+      "This website is built on NodeJS and React and is deployed on render. I have used JWT verification and S3 bucket for storing images.",
+    chrome: "https://cms-8i2x.onrender.com",
+    github: "https://github.com/mahatsumit5/cfw_ecommerce_cms_api",
+  },
+  {
+    id: 10,
+    src: ecommerce,
+    alt: "Ecommerce Store",
+    title: "EcommerceStore",
+    description:
+      "This website is built on NodeJS and React and is deployed on render. I have used JWT verification and S3 bucket for storing images.",
+    chrome: "https://cfw-api.onrender.com",
+    github: "https://github.com/mahatsumit5/cfw-client-api",
   },
 ];
 const Carousel = () => {

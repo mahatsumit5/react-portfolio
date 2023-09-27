@@ -4,9 +4,7 @@ import { motion, useInView } from "framer-motion";
 export const AboutMe = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
-  useEffect(() => {
-    console.log("Element is in view: ", isInView);
-  }, [isInView]);
+
   return (
     <>
       <div ref={ref} className="about flex" id="about">

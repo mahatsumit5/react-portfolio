@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getWeatherData } from "./weatherAction";
 import "../../CSS/weather.css";
+import { CustomSpinner } from "../spinner/CustomSpinner";
 export const Weather = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -19,7 +20,7 @@ export const Weather = () => {
   const [hourforecast, sethourforecast] = useState([]);
   const [city, setCity] = useState("");
   useEffect(() => {
-    dispatch(getWeatherData("Sydney"));
+    dispatch(getWeatherData("sydney"));
   }, [dispatch]);
   useEffect(() => {
     setWeatherData(weather.current);
@@ -37,6 +38,7 @@ export const Weather = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
 
+    handleShow();
     dispatch(getWeatherData(city));
   };
   const option = {
@@ -50,9 +52,16 @@ export const Weather = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow} className="me-2 checkbox">
-        <i class="fa-sharp fa-solid fa-cloud"></i>
-      </Button>
+      {weather.location ? (
+        <Button variant="" onClick={handleShow} className="me-2 checkbox">
+          {weatherData && weatherData.temp_c}&#8451;<br></br>
+          {location?.name},{location?.country}
+        </Button>
+      ) : (
+        <span className="checkbox">
+          <CustomSpinner />
+        </span>
+      )}
       <Offcanvas {...option}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>

@@ -3,7 +3,7 @@ import mypic from "../assests/mypic.png";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import { CustomModal } from "./customModal/CustomModal";
-
+import { Weather } from "./weather/Weather";
 const LandingPage = () => {
   return (
     <>
@@ -14,7 +14,7 @@ const LandingPage = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
       >
-        {/* <video src={v} autoPlay loop muted playsInline /> */}
+        <Weather />
         <div className="intro">
           <motion.div
             initial={{ x: "-50vw" }}

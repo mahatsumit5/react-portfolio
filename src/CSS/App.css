@@ -1,11 +1,11 @@
 /* default section */
 
 :root {
-  --color-dark: #191919;
-  --secondary-color: #ffffff;
-  --dominant-color: #191919;
-  --accent-color: #e6e8e6;
-  --backup-color: #f15025;
+  --color-dark: #0e096ec9;
+  --secondary-color: #5851f4;
+  --dominant-color: #fafafa;
+  --accent-color: #968ab6;
+  --backup-color: #0e096ec9;
   --text-color: var(--secondary-color);
   --border-color: var(--backup-color);
   --dark-bg: var(--color-dark);

@@ -4,11 +4,7 @@ import { toast } from "react-toastify";
 
 export const getWeatherData = (city) => async (dispatch) => {
   try {
-    const respPromise = fetchData(city);
-    toast.promise(respPromise, {
-      pending: "please wait....",
-    });
-    const { data } = await respPromise;
+    const { data } = await fetchData(city);
 
     data && dispatch(setWeatherData(data));
     return true;

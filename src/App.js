@@ -10,7 +10,6 @@ import "./CSS/App.css";
 import "./CSS/weather.css";
 import { Container } from "react-bootstrap";
 
-import { Weather } from "./Components/weather/Weather";
 import { ParticlesBackground } from "./Components/particles/ParticlesBackground";
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
         <Hero />
         <Skills />
         <AboutMe />
-        <Weather />
         <Carousel />
         <Footer />
       </Container>
