@@ -3,12 +3,11 @@ import pic from "../assests/mypic.png";
 import { useEffect, useRef, useState } from "react";
 import { NavBar } from "./NavBar";
 import { motion, useInView } from "framer-motion";
+import resume from "../assests/resume.pdf";
 export const Hero = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
-  useEffect(() => {
-    console.log("Element is in view: ", isInView);
-  }, [isInView]);
+
   const paragraph = `Hello, I am Sumit Mahat and I am a graduate from Southern Cross
 University(2022). I am a Software Developer by profession and I am
 currently enrolled at Dented Code undertaking JRP to be a
@@ -58,7 +57,7 @@ Node.Js.`;
             </div>
             <div className="fluid flex">
               <motion.a
-                href="../"
+                href={resume}
                 className="button"
                 target="_blank"
                 whileHover={{
