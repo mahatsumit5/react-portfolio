@@ -41,8 +41,8 @@ export const AboutMe = () => {
             </motion.h2>
             <motion.p
               className="paragraph"
-              initial={{ x: "-100vw" }}
-              animate={{ x: isInView ? 0 : "-100vw" }}
+              initial={{ x: "200vw" }}
+              animate={{ x: isInView ? 0 : "200vw" }}
               transition={{ duration: 1 }}
             >
               Software Engineer Graduate dedicated to improving skills through

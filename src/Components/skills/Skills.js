@@ -3,6 +3,7 @@ import { BiLogoRedux, BiLogoTrello } from "react-icons/bi";
 import { FiFigma } from "react-icons/fi";
 import { SiJira } from "react-icons/si";
 import { BiLogoAws } from "react-icons/bi";
+import { SiMui } from "react-icons/si";
 import { motion, useDragControls } from "framer-motion";
 const skills = [
   {
@@ -65,6 +66,12 @@ const reactIcons = [
     icon: BiLogoAws,
     className:
       "aws p-3 d-flex justify-content-center align-items-center flex-column  shadow rounded gap-2",
+  },
+  {
+    name: "Mui",
+    icon: SiMui,
+    className:
+      "mui p-3 d-flex justify-content-center align-items-center flex-column  shadow rounded gap-2",
   },
 ];
 export const Skills = () => {
