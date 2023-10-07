@@ -1,7 +1,6 @@
 import { Hero } from "./Components/Hero";
 import LandingPage from "./Components/LandingPage";
 import { Skills } from "./Components/skills/Skills";
-import { SideMenu } from "./Components/SideMenu";
 import { AboutMe } from "./Components/AboutMe";
 import { Footer } from "./Components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,7 +17,6 @@ function App() {
 
       <Container fluid>
         <LandingPage />
-        <SideMenu />
         <Hero />
         <Skills />
         <AboutMe />

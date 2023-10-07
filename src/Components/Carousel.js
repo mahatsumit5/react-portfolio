@@ -76,7 +76,7 @@ const Images = [
     title: "Ecommerce Management System",
     description:
       "This website is built on NodeJS and React and is deployed on render. I have used JWT verification and S3 bucket for storing images.",
-    chrome: "https://cms-8i2x.onrender.com",
+    chrome: "http://cfw-cms-website.s3-website-us-east-1.amazonaws.com/",
     github: "https://github.com/mahatsumit5/cfw_ecommerce_cms_api",
   },
   {
@@ -86,7 +86,7 @@ const Images = [
     title: "EcommerceStore",
     description:
       "This website is built on NodeJS and React and is deployed on render. I have used JWT verification and S3 bucket for storing images.",
-    chrome: "https://cfw-api.onrender.com",
+    chrome: "http://ecommwebsite.s3-website-us-east-1.amazonaws.com/",
     github: "https://github.com/mahatsumit5/cfw-client-api",
   },
 ];
